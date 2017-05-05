@@ -1,0 +1,5311 @@
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                      CODEBOOK
+
+
+            Census of Canada, 2006: individual public use microdata file
+                                          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      Census of Canada, 2006: individual public use microdata file      Page i
+
+
+                                      CONTENTS
+
+
+      item                                                                page
+
+      CASEID             Unique record identifier (ppsort)                   1
+      cma                Census metropolitan area                            1
+      pr                 Province                                            2
+      hhclass            Private household indicator                         3
+      hhsize             Number of persons in household                      4
+      hhtype             Type of household                                   5
+      noncfinhh          Presence of persons not in census families in ho    5
+      pkidhh             Presence of children in Census family households    6
+      prihm              Primary household maintainer indicator              7
+      cfinef             Number of census families in economic family        7
+      cfsize             Number of persons in census family                  8
+      cfstat             Detailed Census family status and household livi    8
+      efnotcf            Presence of persons not in census families in ec    9
+      efsize             Number of persons in economic family                9
+      pkid0_1            Presence of children aged 0 to 1 in census famil   10
+      pkid15_24          Presence of children aged 15 to 24 in census fam   10
+      pkid2_5            Presence of children aged 2 to 5 in census famil   10
+      pkid25             Presence of children aged 25 and older in census   11
+      pkid6_14           Presence of children aged 6 to 14 in census fami   11
+      agegrp             Age groups                                         12
+      marst              Legal marital status                               13
+      marsth             Historical comparability indicator of marital st   13
+      sex                Sex                                                14
+      ageimm             Age at immigration                                 15
+      citizen            Citizenship                                        16
+      citoth             Citizenship other than Canadian                    17
+      genstat            Generation status                                  18
+      immstat            Immigrant status                                   18
+      pob                Place of birth of respondent                       19
+      pobf               Place of birth of father                           20
+      pobm               Place of birth of mother                           21
+      yrimm              Year of immigration                                22
+      vismin             Visible minority population                        23
+      visminh            Historical visible minority population             24
+      aboid              Aboriginal identity                                25
+      bfnmemb            Band or First Nation membership                    26
+      regind             Registered or Treaty Indian                        27
+      ethder             Derived single and selected multiple ethnic orig   28
+      fol                First official language spoken                     28
+      hlaen              Home language – English component – Part A     28
+      hlafr              Home language – French component – Part A      29
+      hlano              Home Language – Non-official language componen   30
+      hlben              Home language – English component – Part B     31
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page ii
+
+
+      item                                                                page
+
+      hlbfr              Home language – French component – Part B      31
+      hlbno              Home language – Non-official language componen   32
+      kol                Knowledge of official language                     32
+      lwaen              Language of work – English component – Part    33
+      lwafr              Language of work – French component – Part A   33
+      lwano              Language of work – Non-official language compo   34
+      lwben              Language of work – English component – Part    34
+      lwbfr              Language of work – French component – Part B   35
+      lwbno              Language of work – Non-official language compo   35
+      mtnen              Mother tongue – English component                36
+      mtnfr              Mother tongue – French component                 36
+      mtnno              Mother tongue – Non-official language componen   37
+      nol                Single and multiple responses to the non-officia   38
+      attsch             Attendance at school                               39
+      cip                Major field of study (based on the CIP Canada 20   40
+      hdgree             Highest certificate, diploma or degree             41
+      locstud            Location of study                                  42
+      mfs                Major field of study (based on the MFS Classific   43
+      ssgrad             High school graduation certificate or equivalent   44
+      mob1               Mobility status – Place of residence 1 year ag   45
+      mob5               Mobility status – Place of residence 5 years a   46
+      pr1                Province of residence 1 year ago                   47
+      pr5                Province of residence 5 years ago                  48
+      dist               Commuting distance to work                         49
+      mode               Mode of transportation to work                     50
+      powst              Place of work status                               51
+      pwpr               Province of work                                   52
+      cow                Class of worker                                    53
+      fptwk              Full-time or part-time weeks worked in 2005        54
+      hrswrk             Hours worked for pay or in self-employment         54
+      lfact              Labour force activity                              55
+      lstwrk             When last worked for pay or in self-employment     56
+      naics              Industry (based on the 2002 North American Indus   57
+      nochrd             Occupation (Employment equity designations – b   58
+      nocs               Occupation (based on the 2006 National Occupatio   59
+      wkswrk             Weeks worked in 2005                               60
+      wrkact             Work activity in 2005                              61
+      uphwrk             Hours spent doing unpaid housework                 62
+      upkid              Hours spent looking after children, without pay    63
+      upsr               Hours spent providing unpaid care or assistance    64
+      cfinc              Census family income groups                        65
+      cfinc_at           Census family after-tax income groups              66
+      chdbn              Child benefits                                     67
+      cqppb              Canada/Quebec Pension Plan benefits                67
+      efinc              Economic family income groups                      68
+      efinc_at           Economic family after-tax income groups            69
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file    Page iii
+
+
+      item                                                                page
+
+      eicbn              Employment insurance benefits                      70
+      empin              Employment income                                  70
+      govti              Other government income                            71
+      gtrfs              Total government transfer payments                 72
+      hhinc              Household income groups                            73
+      hhinc_at           Household after-tax income groups                  74
+      inctax             Income tax paid                                    75
+      invst              Investment income                                  75
+      lico               Low income before tax status (Person)              76
+      lico_at            Low income after-tax status (Person)               76
+      mrkinc             Market income                                      77
+      msi                Major sources of income for census families        77
+      oasgi              Old Age Security pension and Guaranteed Income S   78
+      otinc              Other money income                                 78
+      retir              Retirement pensions                                79
+      sempi              Total self-employment income                       79
+      totinc             Total income of individual                         80
+      totinc_at          Total after-tax income of individual               80
+      wages              Wages and salary income                            81
+      condo              Tenure – Condominium                             81
+      grosrt             Gross rent                                         82
+      omp                Owner's major payments (monthly)                   82
+      repair             Condition of dwelling                              83
+      room               Number of rooms                                    84
+      tenur              Tenure                                             85
+      value              Value of dwelling                                  85
+      weight             Individuals weighting factor                       86
+      wt1                Replicate PUMF weight                              86
+      wt2                Replicate PUMF weight                              86
+      wt3                Replicate PUMF weight                              86
+      wt4                Replicate PUMF weight                              86
+      wt5                Replicate PUMF weight                              87
+      wt6                Replicate PUMF weight                              87
+      wt7                Replicate PUMF weight                              87
+      wt8                Replicate PUMF weight                              87
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file      Page 1
+
+
+      CASEID             Unique record identifier (ppsort)
+
+           Original variable name is 'ppsort'.
+
+           Data type: numeric
+           Record/columns: 1/1-6
+
+      ________________________________________________________________________
+
+      cma                Census metropolitan area
+
+           Description: Refers to the census metropolitan area (CMA) or
+           census agglomeration (CA) where current residence is located
+           (2006). Please note that contrary to the variables CMA1 and
+           CMA5, the variable CMA does not distinguish between the
+           non-CMA/CA areas of the territories and those in the rest of the
+           country. Users interested in making this distinction for
+           comparability purposes may use the variable province of
+           residence (PR).
+
+           VALUE  LABEL
+             205  Halifax
+             399  Moncton – Saint John
+             421  Québec
+             462  Montréal
+             499  Sherbrooke – Trois-Rivières
+             505  Ottawa – Gatineau
+             532  Oshawa
+             535  Toronto
+             537  Hamilton
+             539  St. Catharines – Niagara
+             541  Kitchener
+             555  London
+             559  Windsor
+             577  Brantford – Guelph – Barrie
+             588  Kingston – Peterborough
+             599  Greater Sudbury/Grand Sudbury – Thunder Bay
+             602  Winnipeg
+             799  Regina – Saskatoon
+             825  Calgary
+             835  Edmonton
+             933  Vancouver
+             935  Victoria
+             988  Kelowna – Abbotsford
+             999  Other census metropolitan areas, Census Agglomerations
+                  and other geographies
+
+           Data type: numeric
+           Record/columns: 1/7-9
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file      Page 2
+
+
+      pr                 Province
+
+           Description: Refers to the major political division of Canada
+           where the current residence is located (on May 16, 2006).
+
+           VALUE  LABEL
+              10  Newfoundland and Labrador
+              11  Prince Edward Island
+              12  Nova Scotia
+              13  New Brunswick
+              24  Quebec
+              35  Ontario
+              46  Manitoba
+              47  Saskatchewan
+              48  Alberta
+              59  British Columbia
+              60  Northern Canada
+
+           Data type: numeric
+           Record/columns: 1/10-11
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file      Page 3
+
+
+      hhclass            Private household indicator
+
+           Description: Household: Refers to a person or a group of persons
+           (other than foreign residents) who occupy the same dwelling and
+           do not have a usual place of residence elsewhere in Canada. It
+           may consist of a family group (census family) with or without
+           other persons not in a census family, of two or more families
+           sharing a dwelling, of a group of unrelated persons, or of one
+           person living alone. Household members who are temporarily
+           absent on Census Day (e.g., temporary residents elsewhere) are
+           considered as part of their usual household. For census
+           purposes, every person is a member of one and only one
+           household. Unless otherwise specified, all data in household
+           reports are for private households only. Private household
+           refers to a person or a group of persons (other than foreign
+           residents) who occupy a private dwelling and do not have a usual
+           place of residence elsewhere in Canada. Other Households Refers
+           to a person or a group of persons who occupy a collective
+           dwelling and do not have a usual place of residence elsewhere in
+           Canada, or to a person or a group of persons residing together
+           outside Canada on government, military or diplomatic postings.
+
+           VALUE  LABEL
+               0  Not a private household
+               1  Private household
+
+           Data type: numeric
+           Record/column: 1/12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file      Page 4
+
+
+      hhsize             Number of persons in household
+
+           Description: Refers to the number of persons in a private
+           household. Collective households and households outside Canada
+           were not taken into account in the calculations used to
+           establish household size.
+
+           VALUE  LABEL
+               1  One person
+               2  Two persons
+               3  Three persons
+               4  Four persons
+               5  Five persons
+               6  Six persons
+               7  Seven or more persons
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/13
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file      Page 5
+
+
+      hhtype             Type of household
+
+           Description: Refers to the basic division of private households
+           into family and non-family households. Family household refers
+           to a household that contains at least one census family, that
+           is, a married couple with or without children, or a couple
+           living common-law with or without children, or a lone parent
+           living with one or more children (lone-parent family).
+           One-family household refers to a single census family (with or
+           without other persons not in a census family) that occupies a
+           private dwelling. Multiple-family household refers to a
+           household in which two or more census families (with or without
+           additional persons not in a census family) occupy the same
+           private dwelling.
+
+           VALUE  LABEL
+               1  One family, married couple
+               2  One family, common-law couple
+               3  One family, lone parent family
+               4  More than one family
+               5  Person living alone
+               6  Two or more persons not in census families
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/14
+
+      ________________________________________________________________________
+
+      noncfinhh          Presence of persons not in census families in household
+
+           Description: Refers to the presence of persons not in census
+           families in the household.
+
+           VALUE  LABEL
+               0  None
+               1  One or more
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/15
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file      Page 6
+
+
+      pkidhh             Presence of children in Census family households
+
+           Description: Refers to the presence of children in census
+           families in private households. Children refer to blood, step-
+           or adopted sons and daughters (regardless of age or marital
+           status) who are living in the same dwelling as their parent(s),
+           as well as grandchildren in households where there are no
+           parents present. Sons and daughters who are living with their
+           spouse or common-law partner, or with one or more of their own
+           children, are not considered to be members of the census family
+           of their parent(s), even if they are living in the same
+           dwelling. In addition, the sons or daughters who do not live in
+           the same dwelling as their parent(s) are not considered members
+           of the census family of their parent(s). When sons or daughters
+           study or have a summer job elsewhere but return to live with
+           their parent(s) during the year, these sons and daughters are
+           considered members of the census family of their parent(s).
+
+           VALUE  LABEL
+               0  None
+               1  One or more
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/16
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file      Page 7
+
+
+      prihm              Primary household maintainer indicator
+
+           Description: The first person in the household identified as
+           being the household maintainer. This variable identifies the
+           first household maintainer entered in Question H1. Due to
+           changes in questionnaire design and data capture, the method of
+           identifying the primary household maintainer in 2006, 2001 and
+           1996 differs slightly from that of 1991. These changes may
+           affect households where two or more persons contribute towards
+           shelter expenses. As a result, the characteristics of the
+           primary household maintainer in 2006, 2001 and 1996 may not be
+           strictly comparable to those released in the 1991 Census. In the
+           1981 and 1986 censuses, only one person could be counted as
+           being the household maintainer. Comparisons with the 2006, 2001,
+           1996 and 1991 censuses can be carried out using the Primary
+           household maintainer variable.
+
+           VALUE  LABEL
+               0  Person is not primary maintainer
+               1  Person is primary maintainer
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/17
+
+      ________________________________________________________________________
+
+      cfinef             Number of census families in economic family
+
+           Description: Refers to the number of census families within the
+           economic family.
+
+           VALUE  LABEL
+               0  None
+               1  One
+               2  Two or more
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/18
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file      Page 8
+
+
+      cfsize             Number of persons in census family
+
+           Description: Number of persons in census family. Equals 1 for
+           persons not in a census family.
+
+           VALUE  LABEL
+               1  Person not living in a census family
+               2  Two persons
+               3  Three persons
+               4  Four persons
+               5  Five persons
+               6  Six persons
+               7  Seven or more persons
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/19
+
+      ________________________________________________________________________
+
+      cfstat             Detailed Census family status and household living arrangements
+
+           Description: Refers to the classification of the population
+           according to whether or not the persons are members of a census
+           family.
+
+           VALUE  LABEL
+               1  Male, married spouse (Husband)
+               2  Female, married spouse (Wife)
+               3  Male – Common-law partner
+               4  Female – Common-law partner
+               5  Male parent in lone-parent family
+               6  Female parent in lone-parent family
+               7  Child of married couple
+               8  Child of common-law couple
+               9  Child in lone-parent family with male parent
+              10  Child in lone-parent family with female parent
+              11  Person not in a Census family but living with other relatives
+              12  Person living alone
+              13  Person living with non-relatives only
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data code: 99
+           Record/columns: 1/20-21
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file      Page 9
+
+
+      efnotcf            Presence of persons not in census families in economic family
+
+           Description: Refers to the presence of persons not in census
+           families in the economic family.
+
+           VALUE  LABEL
+               0  None
+               1  One or more
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/22
+
+      ________________________________________________________________________
+
+      efsize             Number of persons in economic family
+
+           Description: Number of people in economic family. Equals 1 for
+           persons not in an economic family.
+
+           VALUE  LABEL
+               1  Person not in an economic family
+               2  Two persons
+               3  Three persons
+               4  Four persons
+               5  Five persons
+               6  Six persons
+               7  Seven or more persons
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/23
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 10
+
+
+      pkid0_1            Presence of children aged 0 to 1 in census family
+
+           Description: Refers to the presence of children aged 0 to 1 in
+           the census family.
+
+           VALUE  LABEL
+               0  None
+               1  One or more
+               8  Not available
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/24
+
+      ________________________________________________________________________
+
+      pkid15_24          Presence of children aged 15 to 24 in census family
+
+           Description: Refers to the presence of children aged 15 to 24 in
+           the census family.
+
+           VALUE  LABEL
+               0  None
+               1  One or more
+               8  Not available
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/25
+
+      ________________________________________________________________________
+
+      pkid2_5            Presence of children aged 2 to 5 in census family
+
+           Description: Refers to the presence of children aged 2 to 5 in
+           the census family.
+
+           VALUE  LABEL
+               0  None
+               1  One or more
+               8  Not available
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/26
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 11
+
+
+      pkid25             Presence of children aged 25 and older in census family
+
+           Description: Refers to the presence of children aged 25 and over
+           in the census family.
+
+           VALUE  LABEL
+               0  None
+               1  One or more
+               8  Not available
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/27
+
+      ________________________________________________________________________
+
+      pkid6_14           Presence of children aged 6 to 14 in census family
+
+           Description: Refers to the presence of children aged 6 to 14 in
+           the census family.
+
+           VALUE  LABEL
+               0  None
+               1  One or more
+               8  Not available
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/28
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 12
+
+
+      agegrp             Age groups
+
+           Description: Refers to the age at last birthday (as of the
+           census reference date, May 16, 2006). This variable is derived
+           from date of birth.
+
+           VALUE  LABEL
+               1  0 to 4 years
+               2  5 to 6 years
+               3  7 to 9 years
+               4  10 to 11 years
+               5  12 to 14 years
+               6  15 to 17 years
+               7  18 to 19 years
+               8  20 to 24 years
+               9  25 to 29 years
+              10  30 to 34 years
+              11  35 to 39 years
+              12  40 to 44 years
+              13  45 to 49 years
+              14  50 to 54 years
+              15  55 to 59 years
+              16  60 to 64 years
+              17  65 to 69 years
+              18  70 to 74 years
+              19  75 to 79 years
+              20  80 to 84 years
+              21  85 years and over
+              88  Not available
+
+           Data type: numeric
+           Missing-data code: 88
+           Record/columns: 1/29-30
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 13
+
+
+      marst              Legal marital status
+
+           Description: Legal marital status of the person. The categories
+           are: Legally married (and not separated); Separated, but still
+           legally married; Divorced; Widowed; Never legally married
+           (single). In 2006, married same-sex spouses are included in the
+           category 'Legally married (and not separated).'
+
+           VALUE  LABEL
+               1  Divorced
+               2  Legally married (and not separated)
+               3  Separated, but still legally married
+               4  Never legally married (single)
+               5  Widowed
+
+           Data type: numeric
+           Record/column: 1/31
+
+      ________________________________________________________________________
+
+      marsth             Historical comparability indicator of marital status
+
+           Description: Marital status of the person -- Historical. The
+           categories are: Married or common-law; Separated; Divorced;
+           Widowed; Never married (single). Since 2001, same-sex common-law
+           partners are included in the category 'Married or common-law.'
+           In 2006, same-sex married spouses are included in the category
+           'Married or common-law.' For legal marital status, use the legal
+           marital status variable (MARST).
+
+           VALUE  LABEL
+               1  Divorced
+               2  Now married or living in common-law
+               3  Separated
+               4  Never married (single)
+               5  Widowed
+
+           Data type: numeric
+           Record/column: 1/32
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 14
+
+
+      sex                Sex
+
+           Description: Refers to the gender of the respondent
+
+           VALUE  LABEL
+               1  Female
+               2  Male
+
+           Data type: numeric
+           Record/column: 1/33
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 15
+
+
+      ageimm             Age at immigration
+
+           Description: Refers to the age at which the respondent first
+           obtained landed immigrant status. A landed immigrant is a person
+           who has been granted the right to live in Canada permanently by
+           immigration authorities. Age at immigration is calculated using
+           the year of immigration, the year of birth, and an estimated
+           month of immigration. Respondents who answered 'Yes' to the
+           landed immigrant status question (Question 11) were asked to
+           answer the year of immigration question (Question 12) by
+           reporting the year in which they first obtained landed immigrant
+           status. People who answered 'No' to Question 11 will not have
+           gone through the immigration process and, thus, do not have a
+           year of immigration or an age at immigration. These people are
+           Canadian citizens by birth or non-permanent residents (people
+           from another country who have a study or work permit, or who
+           were refugee claimants at the time of the census, and family
+           members living here with them). Age at immigration data are
+           available since the 1981 Census. Censuses taken earlier than in
+           1981 had only periods of immigration, i.e., ranges of years,
+           which made it impossible to calculate the age at immigration.
+
+           VALUE  LABEL
+               1  0 to 4 years
+               2  5 to 9 years
+               3  10 to 14 years
+               4  15 to 19 years
+               5  20 to 24 years
+               6  25 to 29 years
+               7  30 to 34 years
+               8  35 to 39 years
+               9  40 to 44 years
+              10  45 to 49 years
+              11  50 to 54 years
+              12  55 to 59 years
+              13  60 years and over
+              88  Not available
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 88,99
+           Record/columns: 1/34-35
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 16
+
+
+      citizen            Citizenship
+
+           Description: Refers to the legal citizenship status of the
+           respondent. Persons who are citizens of more than one country
+           were instructed to provide the name of the other country(ies).
+           Canadian citizens were asked to distinguish between Canadian
+           citizenship by birth and Canadian citizenship by naturalization.
+           Persons who were born outside Canada and who are Canadian
+           citizens by birth were requested to report 'Canada, by birth'.
+           In 2006, as in 1996 and 2001, a space was provided for a
+           write-in response, as well as for the mark-in responses of
+           'Canada, by birth' and 'Canada, by naturalization'. Respondents
+           could write in a country of citizenship other than Canada.
+           Multiple responses to the citizenship question were also
+           accepted. In the 1971 Census, respondents were asked to indicate
+           specific countries of citizenship. In 1981, 1986 and 1991, the
+           format of the question was changed. For those censuses,
+           citizenship information for specific countries is available, but
+           only for respondents who indicated the same country for their
+           citizenship and their place of birth. Data for the 2006 Census,
+           as in 1996 and 2001, will not be published for all countries of
+           citizenship and dual citizenship. Unpublished data relating to
+           persons who indicated dual citizenship are available upon
+           special request, subject to restrictions imposed to ensure
+           confidentiality.
+
+           VALUE  LABEL
+               1  Canada, by birth
+               2  Canada, by naturalization
+               3  Other country(ies)
+               8  Not available
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/36
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 17
+
+
+      citoth             Citizenship other than Canadian
+
+           Description: The census citizenship question refers not only to
+           Canadian citizenship status but also to citizenships of
+           countries other than Canada. In the 1991 citizenship question,
+           two answer circles were provided for respondents to indicate if
+           they were citizens of their country of birth and/or citizens of
+           another country. In 1996, 2001 and 2006, these two answer
+           circles were removed, and respondents were to write in the
+           name(s) of the country(ies), other than Canada, where they held
+           citizenship. This new variable refers to citizenship(s) other
+           than Canadian held by respondents, regardless of their Canadian
+           citizenship status. For respondents who reported a single
+           citizenship other than Canadian, countries of citizenship are
+           shown separately, subject to confidentiality constraints.
+           Responses of individuals who indicated multiple citizenships
+           other than Canadian (e.g., France and Spain) are aggregated
+           under the 'Multiple citizenships other than Canadian' code.
+
+           VALUE  LABEL
+               1  United States of America
+               2  Other America and Caribbean
+               3  Western Europe
+               4  Eastern Europe
+               5  Northern Europe
+               6  Southern Europe
+               7  Africa
+               8  West Central Asia and the Middle East
+               9  Eastern Asia
+              10  Southeast Asia
+              11  Southern Asia
+              12  Oceania and other
+              13  Multiple citizenships other than Canadian
+              88  Not available
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 88,99
+           Record/columns: 1/37-38
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 18
+
+
+      genstat            Generation status
+
+           Description: Refers to the generational status of a person, that
+           is, '1st generation', '2nd generation' or '3rd generation or
+           more.'
+
+           VALUE  LABEL
+               1  First generation
+               2  2nd generation, both parents born outside Canada
+               3  2nd generation, one parent born outside Canada
+               4  3rd generation, respondent born in Canada, both parents born in Canada
+               8  Not available
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/39
+
+      ________________________________________________________________________
+
+      immstat            Immigrant status
+
+           Description: Indicates whether the respondent is a
+           non-immigrant, an immigrant or a non-permanent resident.
+           Non-immigrants are persons who are Canadian citizens by birth.
+           Immigrants are persons who are, or have ever been, landed
+           immigrants in Canada (includes immigrants who landed in Canada
+           prior to Census Day, May 16, 2006). Non-permanent residents are
+           persons from another country who, at the time of the census,
+           held a work or study permit, or who were refugee claimants, as
+           well as family members living with them in Canada.
+
+           VALUE  LABEL
+               1  Non-permanent residents
+               2  Non-immigrants
+               3  Immigrants
+
+           Data type: numeric
+           Record/column: 1/40
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 19
+
+
+      pob                Place of birth of respondent
+
+           Description: Refers to the country where the respondent was
+           born. Respondents were asked to indicate their place of birth
+           according to the boundaries in existence on Census Day, May 16,
+           2006. For example, respondents born in an area which, at the
+           time of their birth, were part of the USSR but which is now part
+           of Kazakhstan were asked to write 'Kazakhstan.'
+
+           VALUE  LABEL
+               1  Canada
+               2  United States of America
+               3  Central America
+               4  Jamaica
+               5  Other Caribbean and Bermuda
+               6  South America
+               7  United Kingdom
+               8  Germany
+               9  Other Northern and Western Europe
+              10  Poland
+              11  Other Eastern Europe
+              12  Italy
+              13  Portugal
+              14  Other Southern Europe
+              15  Eastern Africa
+              16  Northern Africa
+              17  Other Africa
+              18  West Central Asia and the Middle East
+              19  China, People's Republic of
+              20  Hong Kong, Special Administrative Region
+              21  Other Eastern Asia
+              22  Philippines
+              23  Other Southeast Asia
+              24  India
+              25  Pakistan
+              26  Other Southern Asia
+              27  Oceania and others
+              88  Not available
+
+           Data type: numeric
+           Missing-data code: 88
+           Record/columns: 1/41-42
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 20
+
+
+      pobf               Place of birth of father
+
+           Description: Refers to the country where the respondent's father
+           was born. Respondents were asked to indicate the place of birth
+           of their father according to the boundaries in existence on
+           Census Day, May 16, 2006. For example, a respondent whose father
+           was born in an area which, at the time of his birth, was part of
+           the USSR but which is now part of Kazakhstan was asked to write
+           'Kazakhstan.' The place of birth of respondent, place of birth
+           of father and place of birth of mother questions on the census
+           are used to derive Generation status.
+
+           VALUE  LABEL
+               1  Canada
+               2  United States of America
+               3  Other Americas
+               4  Europe
+               5  Eastern Asia
+               6  Southeast and Southern Asia
+               7  Other countries and regions
+               8  Not available
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/43
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 21
+
+
+      pobm               Place of birth of mother
+
+           Description: Refers to the country where the respondent's mother
+           was born. Respondents were asked to indicate the place of birth
+           of their mother according to the boundaries in existence on
+           Census Day, May 16, 2006. For example, a respondent whose mother
+           was born in an area which, at the time of her birth, was part of
+           the USSR but which is now part of Kazakhstan was asked to write
+           'Kazakhstan.' The place of birth of respondent, place of birth
+           of father and place of birth of mother questions on the census
+           are used to derive Generation status.
+
+           VALUE  LABEL
+               1  Canada
+               2  United States of America
+               3  Other Americas
+               4  Europe
+               5  Eastern Asia
+               6  Southeast and Southern Asia
+               7  Other countries and regions
+               8  Not available
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/44
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 22
+
+
+      yrimm              Year of immigration
+
+           Description: Refers to the year landed immigrant status was
+           first obtained in Canada. Includes immigrants who landed in
+           Canada prior to Census Day, May 16, 2006. A landed immigrant is
+           a person who has been granted the right to live in Canada
+           permanently by immigration authorities. This variable is used to
+           derive a variable indicating immigrant status and period of
+           immigration. Users should note that historical comparisons of
+           individual years of immigration can be affected by a number of
+           factors, for example emigration and mortality among the
+           immigrant population, respondent reporting patterns and coverage
+           of immigrants in the census.
+
+           VALUE  LABEL
+               1  before 1950
+               2  1950 to 1954
+               3  1955 to 1959
+               4  1960 to 1964
+               5  1965 to 1969
+               6  1970 to 1974
+               7  1975 to 1979
+            1980  1980
+            1981  1981
+            1982  1982
+            1983  1983
+            1984  1984
+            1985  1985
+            1986  1986
+            1987  1987
+            1988  1988
+            1989  1989
+            1990  1990
+            1991  1991
+            1992  1992
+            1993  1993
+            1994  1994
+            1995  1995
+            1996  1996
+            1997  1997
+            1998  1998
+            1999  1999
+            2000  2000
+            2001  2001
+            2002  2002
+            2003  2003
+            2004  2004
+            2005  2005
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 23
+
+
+            2006  2006
+            8888  Not available
+            9999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888,9999
+           Record/columns: 1/45-48
+
+      ________________________________________________________________________
+
+      vismin             Visible minority population
+
+           Description: Refers to the visible minority group to which the
+           respondent belongs. The Employment Equity Act defines visible
+           minorities as 'persons, other than Aboriginal peoples, who are
+           non-Caucasian in race or non-white in colour.' 'South Asian'
+           includes, for example, East Indian, Pakistani, Sri Lankan, etc.
+           'Southeast Asian' includes, for example, Vietnamese, Cambodian,
+           Malaysian, Laotian, etc. 'West Asian' includes, for example,
+           Iranian, Afghan, etc. 'Visible minority, n.i.e.' includes
+           respondents who reported a write-in response such as Guyanese,
+           West Indian, Kurd, Tibetan, Polynesian, Pacific Islander, etc.
+           'Multiple visible minority' includes respondents who reported
+           more than one visible minority group by checking two or more
+           mark-in circles, e.g., 'Black' and 'South Asian.' 'Aboriginal
+           self-reporting' includes respondents who reported 'Yes' to the
+           Aboriginal identity question (Question 18): these respondents
+           were not required to answer the Population Group question.
+
+           VALUE  LABEL
+               1  Chinese
+               2  South Asian
+               3  Black
+               4  Filipino
+               5  Latin American
+               6  Southeast Asian
+               7  Arab
+               8  West Asian
+               9  Korean
+              10  Japanese
+              11  Visible minority, n.i.e.
+              12  Multiple visible minority
+              13  Not a visible minority
+              88  Not available
+
+           Data type: numeric
+           Missing-data code: 88
+           Record/columns: 1/49-50
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 24
+
+
+      visminh            Historical visible minority population
+
+           Description: Refers to the visible minority group to which the
+           respondent belongs. The Employment Equity Act defines visible
+           minorities as 'persons, other than Aboriginal peoples, who are
+           non-Caucasian in race or non-white in colour.' VisMinH is a
+           historical variable and should be used when comparing visible
+           minority data from the 1996 Census with data from either the
+           2001 or 2006 censuses. VISMINH differs from the non-historical
+           version of the variable (VISMIN) in that it includes a combined
+           stub for 'Arab/West Asian', rather than separate stubs for these
+           groups. Before 1996, visible minority data were derived using
+           Place of Birth, Ethnic Origin, Mother Tongue and, when
+           available, Religion. Since 1996, a direct question has been
+           asked. Precaution should therefore be taken when comparing data
+           before 1996 with data from 1996 onwards as the collection tool
+           for visible minority data has changed.
+
+           VALUE  LABEL
+               1  Chinese
+               2  South Asian
+               3  Black
+               4  Filipino
+               5  Latin American
+               6  Southeast Asian
+               7  Arab/West Asian
+               8  Korean
+               9  Japanese
+              10  Visible minority, n.i.e.
+              11  Multiple visible minority
+              12  Not a visible minority
+              88  Not available
+
+           Data type: numeric
+           Missing-data code: 88
+           Record/columns: 1/51-52
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 25
+
+
+      aboid              Aboriginal identity
+
+           Description: Refers to those persons who reported identifying
+           with at least one Aboriginal group, that is, North American
+           Indian, MÃ©tis or Inuit, and/or those who reported being a Treaty
+           Indian or a Registered Indian, as defined by the Indian Act of
+           Canada, and/or those who reported they were members of an Indian
+           band or First Nation. In 1991 and previous censuses, the
+           Aboriginal population was defined using the ethnic origin
+           question (ancestry). The 1996 Census included a question on the
+           individual's perception of his/her Aboriginal identity. The
+           question used in the 2006 and 2001 censuses is the same as the
+           one used in 1996. Caution should be exercised in analyzing
+           trends for Aboriginal peoples based on previous census data.
+           Over time, patterns in Aboriginal self-identification have
+           changed. In recent years, a growing number of people who had not
+           previously identified with an Aboriginal group are now doing so.
+           Changes in Aboriginal participation in the Census over time also
+           result in comparability issues. There are different ways to
+           define the Aboriginal population in Canada. The 2006 Census also
+           provides information on persons who reported at least one
+           Aboriginal ancestry in the ethnic origin question. Depending on
+           the application, data on either identity or ethnic
+           origin/ancestry may be appropriate for defining the Aboriginal
+           population. Users should be aware that the counts for North
+           American Indian single response are more affected than most by
+           the incomplete enumeration of certain Indian reserves and Indian
+           settlements. The extent of the impact will depend on the
+           geographic area under study. In 2006, a total of 22 Indian
+           reserves and Indian settlements were incompletely enumerated by
+           the census. The populations of these 22 communities are not
+           included in the census counts.
+
+           VALUE  LABEL
+               1  North American Indian single response
+               2  Métis single response
+               3  Inuit single response
+               4  Multiple Aboriginal identity responses
+               5  Aboriginal responses not included elsewhere
+               6  Non-Aboriginal identity population
+
+           Data type: numeric
+           Record/column: 1/53
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 26
+
+
+      bfnmemb            Band or First Nation membership
+
+           Description: Refers to those persons who reported being a member
+           of an Indian band or a First Nation of Canada. In 1991, band
+           membership was a subcomponent of Question 16 on Registered
+           Indians. In the first part of this question, respondents were
+           asked about registration status, while the second part of the
+           question dealt with band membership. In 1996, one direct
+           question was developed to collect data on band/First Nation
+           membership. Many Indian bands have elected to call themselves a
+           First Nation and have changed their band name to reflect this.
+           Also, with the 1985 amendment to theof Canada (Bill C-31), many
+           Indian bands exercised the right to establish their own
+           membership code, whereby it was not always necessary for a band
+           member to be a Registered Indian according to the. The 2006
+           Census used the same question as in 1996 and 2001
+
+           VALUE  LABEL
+               1  Not a member of an Indian band or First Nation
+               2  Member of an Indian band or First Nation
+
+           Data type: numeric
+           Record/column: 1/54
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 27
+
+
+      regind             Registered or Treaty Indian
+
+           Description: Refers to those persons who reported they were
+           registered under the Indian Act of Canada. Treaty Indians are
+           persons who are registered under the Indian Act and can prove
+           descent from a band that signed a treaty. Although there was a
+           question in the 1991 Census on registration status, the layout
+           of the 1996 question was somewhat different. In 1991, Question
+           16 on Registered Indians had two components. In the first part
+           of the question, respondents were asked about their registration
+           status, while the second part of the question dealt with band
+           membership. The question used in 1996 asked only for
+           registration or treaty status, while band membership was dealt
+           with in a separate question. The wording of the question,
+           starting in 1996, differs slightly from the one in previous
+           censuses. Prior to 1996, the term 'treaty' was not included in
+           the question. It was added in 1996 at the request of individuals
+           from the Western provinces, where the term is more widely used.
+           The 2006 Census question is the same as the one used in 1996 and
+           2001. The Registered Indian counts in this data file may differ
+           from the administrative counts maintained by the Department of
+           Indian Affairs and Northern Development, with the most important
+           causes of these differences being the incompletely enumerated
+           Indian reserves and Indian settlements as well as methodological
+           and conceptual differences between the two sources.
+
+           VALUE  LABEL
+               1  Not a Registered Indian
+               2  Registered Indian
+
+           Data type: numeric
+           Record/column: 1/55
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 28
+
+
+      ethder             Derived single and selected multiple ethnic origins
+
+           Description: This variable provides a distribution of the total
+           population by single responses and selected multiple responses
+           to the ethnic origin question (Question 17). Due to the
+           increasingly high proportion of respondents who report multiple
+           origins in the census, it is recommended that this variable be
+           used for only very specific purposes. The abbreviation 'n.i.e.'
+           means 'not included elsewhere.' The abbreviation 'n.o.s.' means
+           'not otherwise specified.' For additional information on issues
+           related to the collection and dissemination of ethnic origin
+           data, and on the comparability of ethnic origin data over time,
+           refer to the Ethnic Origin Reference Guide, 2006 Census.
+
+           Data type: numeric
+           Missing-data code: 88
+           Record/columns: 1/56-57
+
+      ________________________________________________________________________
+
+      fol                First official language spoken
+
+           Description: Refers to a variable specified within the framework
+           of the application of the Official Languages Act.
+
+           VALUE  LABEL
+               1  English
+               2  French
+               3  Both English and French
+               4  Neither English nor French
+
+           Data type: numeric
+           Record/column: 1/58
+
+      ________________________________________________________________________
+
+      hlaen              Home language – English component – Part A
+
+           Description: This variable represents one of three possible
+           answers provided by a respondent. Refers to the language spoken
+           most often at home by the individual at the time of the census.
+           If more than one language was spoken, the language spoken most
+           often by the individual was to be reported (English).
+
+           VALUE  LABEL
+               0  False – Respondent did not report English as the language spoken most often at home
+               1  True – Respondent reported English as the language spoken most often at home
+
+           Data type: numeric
+           Record/column: 1/59
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 29
+
+
+      hlafr              Home language – French component – Part A
+
+           Description: This variable represents one of three possible
+           answers provided by a respondent. Refers to the language spoken
+           most often at home by the individual at the time of the census.
+           If more than one language was spoken, the language spoken most
+           often by the individual was to be reported (French).
+
+           VALUE  LABEL
+               0  False – Respondent did not report French as the language spoken most often at home
+               1  True – Respondent reported French as the language spoken most often at home
+
+           Data type: numeric
+           Record/column: 1/60
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 30
+
+
+      hlano              Home Language – Non-official language component – Part A
+
+           Description: This variable represents one of three possible
+           answers provided by a respondent. Refers to the language spoken
+           most often at home by the individual at the time of the census.
+           If more than one language was spoken, the language spoken most
+           often by the individual was to be reported (First write-in).
+           When comparing the census results to those of the 2001 Census,
+           it appears that there is some overestimation of persons
+           reporting Dakota/Sioux (Siouan languages) in British Columbia
+           and, as a result, also at the Canada level. Although it affects
+           a relatively small population, it is best to apply caution when
+           analysing the census data for Dakota/Sioux (Siouan languages) in
+           these geographies.
+
+           VALUE  LABEL
+               1  No non-official language
+               2  Aboriginal languages
+               3  Italian
+               4  Spanish
+               5  Portuguese
+               6  German
+               7  Russian
+               8  Polish
+               9  Slavic languages
+              10  Other European languages
+              11  Arabic
+              12  Other Afro-Asiatic and African languages
+              13  Panjabi (Punjabi)
+              14  Other Indo-Iranian languages
+              15  Chinese languages
+              16  Austro-Asiatic languages
+              17  Tagalog (Pilipino, Filipino)
+              18  Other Eastern Asian and South East Asian languages
+              19  All other languages
+
+           Data type: numeric
+           Record/columns: 1/61-62
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 31
+
+
+      hlben              Home language – English component – Part B
+
+           Description: This variable represents one of three possible
+           answers provided by a respondent. Refers to the language spoken
+           on a regular basis at home by the individual at the time of the
+           census. If more than one language was spoken, the language
+           spoken most often by the individual was to be reported
+           (English).
+
+           VALUE  LABEL
+               0  False – Respondent did not report English as the language spoken at home on a regular basis
+               1  True – Respondent reported English as the language spoken at home on a regular basis
+
+           Data type: numeric
+           Record/column: 1/63
+
+      ________________________________________________________________________
+
+      hlbfr              Home language – French component – Part B
+
+           Description: This variable represents one of three possible
+           answers provided by a respondent. Refers to the language spoken
+           on a regular basis at home by the individual at the time of the
+           census. If more than one language was spoken, the language
+           spoken most often by the individual was to be reported (French).
+
+           VALUE  LABEL
+               0  False – Respondent did not report French as the language spoken at home on a regular basis
+               1  True – Respondent reported French as the language spoken at home on a regular basis
+
+           Data type: numeric
+           Record/column: 1/64
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 32
+
+
+      hlbno              Home language – Non-official language component – Part B
+
+           Description: This variable represents one of three possible
+           answers provided by a respondent. Refers to the language spoken
+           on a regular basis at home by the individual at the time of the
+           census. If more than one language was spoken, the language
+           spoken most often by the individual was to be reported. When
+           comparing the census results to those of the 2001 Census, it
+           appears that there is some overestimation of persons reporting
+           Dakota/Sioux (Siouan languages) in British Columbia and, as a
+           result, also at the Canada level. Although it affects a
+           relatively small population, it is best to apply caution when
+           analysing the census data for Dakota/Sioux (Siouan languages) in
+           these geographies.
+
+           VALUE  LABEL
+               0  False – Respondent did not report a non-official language as the language spoken at home on a regular basis
+               1  True – Respondent reported a non-official language as the language spoken at home on a regular basis
+
+           Data type: numeric
+           Record/column: 1/65
+
+      ________________________________________________________________________
+
+      kol                Knowledge of official language
+
+           Description: Refers to the ability to conduct a conversation in
+           English only, in French only, in both English and French or in
+           none of the official languages of Canada
+
+           VALUE  LABEL
+               1  English
+               2  French
+               3  Both English and French
+               4  Neither English nor French
+
+           Data type: numeric
+           Record/column: 1/66
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 33
+
+
+      lwaen              Language of work – English component – Part A
+
+           Description: Refers to the language used most often at work by
+           the individual at the time of the census, derived using part A
+           of the Language of Work question (English).
+
+           VALUE  LABEL
+               0  False – Respondent did not report English as the language used most often at work
+               1  True – Respondent reported English as the language used most often at work
+
+           Data type: numeric
+           Record/column: 1/67
+
+      ________________________________________________________________________
+
+      lwafr              Language of work – French component – Part A
+
+           Description: Refers to the language used most often at work by
+           the individual at the time of the census, derived using part A
+           of the Language of Work question (French).
+
+           VALUE  LABEL
+               0  False – Respondent did not report French as the language used most often at work
+               1  True – Respondent reported French as the language used most often at work
+
+           Data type: numeric
+           Record/column: 1/68
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 34
+
+
+      lwano              Language of work – Non-official language component – Part A
+
+           Description: This variable represents one of three possible
+           answers provided by a respondent. Refers to the language used
+           most often at work by the individual at the time of the census.
+           If more than one language was used, the language used most often
+           by the individual was to be reported. When comparing the census
+           results to those of the 2001 Census, it appears that there is
+           some overestimation of persons reporting Dakota/Sioux (Siouan
+           languages) in British Columbia and, as a result, also at the
+           Canada level. Although it affects a relatively small population,
+           it is best to apply caution when analysing the census data for
+           Dakota/Sioux (Siouan languages) in these geographies.
+
+           VALUE  LABEL
+               0  False – Respondent did not report a non-official language as the language used most often at work
+               1  True – Respondent reported a non-official language as the language used most often at work
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/69
+
+      ________________________________________________________________________
+
+      lwben              Language of work – English component – Part B
+
+           Description: Refers to the language used on a regular basis at
+           work by the individual at the time of the census, derived using
+           part B of the Language of Work question (English).
+
+           VALUE  LABEL
+               0  False – Respondent did not report English as the language used on a regular basis at work
+               1  True – Respondent reported English as the language used on a regular basis at work
+
+           Data type: numeric
+           Record/column: 1/70
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 35
+
+
+      lwbfr              Language of work – French component – Part B
+
+           Description: Refers to the language used on a regular basis at
+           work by the individual at the time of the census, derived using
+           part B of the Language of Work question (French).
+
+           VALUE  LABEL
+               0  False – Respondent did not report French as the language used on a regular basis at work
+               1  True – Respondent reported French as the language used on a regular basis at work
+
+           Data type: numeric
+           Record/column: 1/71
+
+      ________________________________________________________________________
+
+      lwbno              Language of work – Non-official language component – Part B
+
+           Description: This variable represents one of three possible
+           answers provided by a respondent. Refers to the language used on
+           a regular basis at work by the individual at the time of the
+           census. If more than one language was used, the language used
+           most often by the individual was to be reported. When comparing
+           the census results to those of the 2001 Census, it appears that
+           there is some overestimation of persons reporting Dakota/Sioux
+           (Siouan languages) in British Columbia and, as a result, also at
+           the Canada level. Although it affects a relatively small
+           population, it is best to apply caution when analysing the
+           census data for Dakota/Sioux (Siouan languages) in these
+           geographies.
+
+           VALUE  LABEL
+               0  False – Respondent did not report a non-official language as the language used on a regular basis at work
+               1  True – Respondent reported a non-official language as the language used on a regular basis at work
+
+           Data type: numeric
+           Record/column: 1/72
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 36
+
+
+      mtnen              Mother tongue – English component
+
+           Description: This variable represents one of three possible
+           answers provided by a respondent. Refers to the language learned
+           in childhood and still understood by the individual at the time
+           of the census (English).
+
+           VALUE  LABEL
+               0  False – Respondent did not report English as mother tongue
+               1  True – Respondent reported English as mother tongue
+
+           Data type: numeric
+           Record/column: 1/73
+
+      ________________________________________________________________________
+
+      mtnfr              Mother tongue – French component
+
+           Description: This variable represents one of three possible
+           answers provided by a respondent. Refers to the language learned
+           in childhood and still understood by the individual at the time
+           of the census (French).
+
+           VALUE  LABEL
+               0  False – Respondent did not report French as mother tongue
+               1  True – Respondent reported French as mother tongue
+
+           Data type: numeric
+           Record/column: 1/74
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 37
+
+
+      mtnno              Mother tongue – Non-official language component
+
+           Description: This variable represents one of three possible
+           answers provided by a respondent. Refers to the language learned
+           in childhood and still understood by the individual at the time
+           of the census. When comparing the census results to those of the
+           2001 Census, it appears that there is some overestimation of
+           persons reporting Dakota/Sioux (Siouan languages) in British
+           Columbia and, as a result, also at the Canada level. Although it
+           affects a relatively small population, it is best to apply
+           caution when analysing the census data for Dakota/Sioux (Siouan
+           languages) in these geographies.
+
+           VALUE  LABEL
+               1  No non-official language
+               2  Aboriginal languages
+               3  Arabic
+               4  Chinese languages
+               5  German
+               6  Other Germanic Languages
+               7  Greek
+               8  Indo-Iranian Languages
+               9  Italian
+              10  Polish
+              11  Portuguese
+              12  Panjabi (Punjabi)
+              13  Spanish
+              14  Ukrainian
+              15  Austro-Asiatic languages
+              16  Other European languages
+              17  Russian
+              18  Other Slavic Languages
+              19  Finno-Ugric Languages
+              20  Other Afro-Asiatic languages
+              21  Dravidian languages
+              22  Other East – South East Asian languages
+              23  Tagalog (Pilipino, Filipino)
+              24  Niger-Congo languages and other African languages
+              25  All other languages
+
+           Data type: numeric
+           Record/columns: 1/75-76
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 38
+
+
+      nol                Single and multiple responses to the non-official language question
+
+           Description: This is the same question as in 1991, 1996, and
+           2001. The non-official language data are based on the
+           respondent's assessment of his or her ability to speak
+           non-official languages. There are two spaces for reporting
+           non-official languages in 2006; there were three spaces in 2001.
+           In 2006, the following instructions were provided to respondents
+           in the 2006 Census Guide: Report only those languages in which
+           the person can carry on a conversation of some length on various
+           topics. For a child who has not yet learned to speak: Report a
+           language other than English or French that the child is learning
+           to speak at home. On the French version of all census forms, for
+           all questions in the language module where there is a choice of
+           response available, the order in which the choices appear was
+           modified since 1996 in order to give precedence to the category
+           'French.' The questions on knowledge of official languages and
+           non-official languages also reflect this change in the actual
+           wording of the questions. This question was asked for the first
+           time in the 1991 Census. Appendix H provides a list of the
+           non-official languages released in 2006, 2001, and 1996.
+
+           VALUE  LABEL
+               1  No non-official language
+               2  Aboriginal languages
+               3  Arabic
+               4  Chinese languages
+               5  German
+               6  Other Germanic languages
+               7  Greek
+               8  Other Indo-Iranian languages
+               9  Italian
+              10  Polish
+              11  Portuguese
+              12  Panjabi (Punjabi)
+              13  Spanish
+              14  Ukrainian
+              15  Austro-Asiatic languages
+              16  Other European languages
+              17  Russian
+              18  Other Slavic languages
+              19  Finno-Ugric languages
+              20  Other Afro-Asiatic languages
+              21  Dravidian languages
+              22  Other East – South East Asian languages
+              23  Tagalog (Pilipino, Filipino)
+              24  Niger-Congo languages and other African languages
+              25  All other single languages
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 39
+
+
+              26  Respondents with multiples non-official languages
+              88  Not available
+
+           Data type: numeric
+           Missing-data code: 88
+           Record/columns: 1/77-78
+
+      ________________________________________________________________________
+
+      attsch             Attendance at school
+
+           Description: Refers to attendance during the nine -month period
+           between September 2005 and May 16, 2006. An individual's
+           attendance could be either full time or part time (day or
+           evening), even if the individual dropped out after registration.
+           Attendance was counted only for courses which could be used as
+           credits towards a certificate, diploma or degree from a
+           recognized educational institution (elementary or secondary
+           school, the in-class portion of registered apprenticeship
+           programs, trade schools, colleges, CEGEPs and universities).
+           Recognized education institutions also included seminaries,
+           schools of nursing, private business schools, private or public
+           trade schools, institutes of technology, vocational schools, or
+           schools for people who are deaf or blind. Attendance at school
+           was not counted for training received from an employer unless it
+           could be used as credit towards a certificate, diploma or degree
+           from a recognized educational institution. Counts for those aged
+           15 to 19 attending school in the 2001 Census were lower than
+           expected and not replicated in other sources. In 2006, changes
+           to the questionnaire brought results for those aged 15 to 19
+           back in to line with censuses prior to 2001. While the results
+           for those aged 20 to 44 are comparable over time, the 2006
+           Census overestimated school attendance for the population aged
+           45 years or over. As a result, it is recommended that the data
+           on school attendance be used with caution and it is not
+           recommended to compare data for the ages 45 and over from 2006
+           with previous censuses. For more information, please see the
+           Education Reference Guide, 2006 Census.
+
+           VALUE  LABEL
+               1  Did not attend school
+               2  Attended school
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/79
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 40
+
+
+      cip                Major field of study (based on the CIP Canada 2000)
+
+           Description: Refers to the predominant discipline or area of
+           learning or training of a person's highest postsecondary
+           certificate, diploma or degree. The Classification of
+           Instructional Programs (CIP Canada 2000) major field of study
+           classification structure consists of 13 major categories or
+           primary groupings, 12 of which are used for the census (the
+           category which includes courses in personal development is not
+           used). The 12 primary groupings are: education; visual and
+           performing arts, and communications technologies; humanities;
+           social and behavioural sciences and law; business, management
+           and public administration; physical and life sciences and
+           technologies; mathematics, computer and information sciences;
+           architecture, engineering and related technologies; agriculture,
+           natural resources and conservation; health, parks, recreation
+           and fitness; personal, protective and transportation services;
+           other. The major field of study data in the 2006 Census were
+           also recoded using the MFS classification that was used prior to
+           the 2006 Census. Future censuses will present information coded
+           to the CIP classification system only. For historical analysis,
+           please use the Major field of study variable (MFS). For more
+           information, please see the Education Reference Guide, 2006
+           Census
+
+           VALUE  LABEL
+               1  Education
+               2  Visual and performing arts, and communications technologies
+               3  Humanities
+               4  Social and behavioural sciences and law
+               5  Business, management and public administration
+               6  Physical and life sciences and technologies
+               7  Mathematics, computer and information sciences
+               8  Architecture, engineering, and related technologies
+               9  Agriculture, natural resources and conservation
+              10  Health, parks, recreation and fitness
+              11  Personal, protective and transportation services
+              12  Other fields of study
+              13  No postsecondary certificate, diploma or degree
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data code: 99
+           Record/columns: 1/80-81
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 41
+
+
+      hdgree             Highest certificate, diploma or degree
+
+           Description: Information indicating the person's most advanced
+           certificate, diploma or degree. This is a derived variable
+           obtained from the educational qualifications questions, which
+           asked for all certificates, diplomas and degrees to be reported.
+           There is an implied hierarchy in this variable (secondary school
+           graduation, registered apprenticeship and trades, college,
+           university) which is loosely tied to the 'in-class' duration of
+           the various types of education. However, at the detailed level a
+           registered apprenticeship graduate may not have completed a
+           secondary school certificate or diploma, nor does an individual
+           with a masterâ€™s degree necessarily have a certificate or diploma
+           above the bachelorâ€™s degree level. Therefore, although the
+           sequence is more or less hierarchical, it is a general rather
+           than an absolute gradient measure of academic achievement. The
+           questions on completed credentials changed significantly in 2006
+           compared to previous censuses (for a complete discussion of the
+           changes, see the Education Reference Guide, Census 2006).
+           Specifically, the 2006 Census included a unique question for
+           each level of educational attainment, rather than including all
+           levels as part of a single list (as was done in censuses prior
+           to 2006). While most of the individual levels of educational
+           attainment are found to be comparable historically, some changes
+           observed over time are the result of changes to the
+           questionnaire. Users should be aware that underreporting of high
+           school completions contributed to elevated results for the less
+           than high school category in censuses prior to 2006, as well as
+           impacting the data for high school graduation. A change was made
+           in the 2006 Census questionnaire to specifically include
+           certification by a type of educational institution found only in
+           Quebec, the 'centres de formation professionelle,' and this has
+           influenced the data on trade certifications in Quebec. Users of
+           the 'University certificate or diploma below the bachelor level'
+           category should know that an unexpected increase in this
+           category was noted compared to the 2001 Census. It is
+           recommended that users not compare this category in 2006 with
+           previous censuses. The college category and university
+           categories at the bachelor's level and above are comparable over
+           time. For more information, please see the Education Reference
+           Guide, 2006 Census.
+
+           VALUE  LABEL
+               1  None
+               2  High school graduation certificate or equivalency certificate
+               3  Other trades certificate or diploma
+               4  Registered apprenticeship certificate
+               5  College, CEGEP or other non-university certificate or diploma from a program of 3 months to less than 1 year
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 42
+
+
+               6  College, CEGEP or other non-university certificate or diploma from a program of 1 year to 2 years
+               7  College, CEGEP or other non-university certificate or diploma from a program of more than 2 years
+               8  University certificate or diploma below bachelor level
+               9  Bachelor's degree
+              10  University certificate or diploma above bachelor level
+              11  Degree in medicine, dentistry, veterinary medicine or optometryc
+              12  Master's degree
+              13  Earned doctorate degree
+              88  Not available
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 88,99
+           Record/columns: 1/82-83
+
+      ________________________________________________________________________
+
+      locstud            Location of study
+
+           Description: This variable indicates the province, territory (in
+           Canada) or country (outside Canada) where the highest
+           certificate, diploma or degree was obtained. It is only reported
+           for individuals who had completed a certificate, diploma or
+           degree above the secondary (high) school level.
+
+           VALUE  LABEL
+               1  Newfoundland and Labrador
+               2  Prince Edward Island
+               3  Nova Scotia
+               4  New Brunswick
+               5  Quebec
+               6  Ontario
+               7  Manitoba
+               8  Saskatchewan
+               9  Alberta
+              10  British Columbia
+              11  Northern Canada
+              12  United States of America
+              13  Other Americas
+              14  Europe
+              15  Eastern Asia
+              16  Southeast and Southern Asia
+              17  Other countries and regions
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data code: 99
+           Record/columns: 1/84-85
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 43
+
+
+      mfs                Major field of study (based on the MFS Classification – Historical)
+
+           Description: Refers to the predominant discipline or area of
+           learning or training of a person's highest postsecondary degree,
+           certificate or diploma. The historical Major Field of Study
+           (MFS) classification structure consists of 11 broad or major
+           categories: educational, recreational and counselling services;
+           fine and applied arts; humanities and related fields; social
+           sciences and related fields ; commerce, management and business
+           administration; agricultural, biological, nutritional and food
+           sciences; engineering and applied sciences; applied science
+           technologies and trades; health professions and related
+           technologies; mathematics, computers and physical sciences; and
+           no specialization. This structure is, in turn, subdivided into
+           110 'minor' classification categories and 449 'unit' groups.
+           Note that for the 2006 PUMF, the last major category, â€˜No
+           specialization,â€™ was merged with â€˜Humanities and related fieldsâ€™
+           due to its negligible size relative to the other MFS categories.
+
+           VALUE  LABEL
+               1  Educational, recreational and counselling services (001-046)
+               2  Fine and applied arts (047-079)
+               3  Humanities and related fields (080-124, 481)
+               4  Social sciences and related fields (125-187)
+               5  Commerce, management and business administration (188-220)
+               6  Agricultural, biological, nutritional, and food sciences (221-266)
+               7  Engineering and applied sciences (267-301)
+               8  Applied science technologies and trades (302-369)
+               9  Health professions and related technologies (370-441)
+              10  Mathematics, computer and physical sciences (442-480)
+              12  No postsecondary qualifications
+              88  Not available
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 88,99
+           Record/columns: 1/86-87
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 44
+
+
+      ssgrad             High school graduation certificate or equivalent
+
+           Description: Refers to the possession of a secondary (high)
+           school graduation certificate or its equivalent, regardless of
+           whether other educational qualifications are held or not. This
+           variable separates the population into those persons with and
+           those without a high school graduation certificate or its
+           equivalent. It also provides information on any additional
+           education that may have been completed by these two populations.
+           The education questions in the census underwent significant
+           changes in 2006 and, as a result, not all variables are
+           historically comparable. For the first time, the 2006 Census
+           included an explicit question asking Canadians to report whether
+           they had completed high school, with a separate category for
+           completion of high school equivalencies. This change was made to
+           address suspected underreporting of high school completions. In
+           previous censuses, all levels of education were included in a
+           single list, with many respondents reporting only their highest
+           credential rather than all credentials earned. In addition to
+           the changes to the questionnaire, the secondary (high) school
+           graduation variable was derived differently in 2006 than in 2001
+           with a focus on completed credentials. As a result of these
+           changes, only the following categories in the 'high school
+           certificate or equivalent' variable may be considered for
+           comparison to previous censuses: 'No high school certificate or
+           equivalent without further schooling' and 'With high school
+           certificate or equivalent with a university degree' -- from
+           bachelor's degree to earned doctorate degree. For more
+           information, please see the Education Reference Guide, 2006
+           Census.
+
+           VALUE  LABEL
+               1  No high school certificate or equivalency certificate without further schooling
+               2  No high school certificate or equivalency certificate with registered apprenticeship or other trade certificate
+               3  No high school certificate or equivalency certificate with college, CEGEP or other non-university certificate
+               4  With high school certificate or equivalency certificate without further schooling
+               5  With high school certificate or equivalency certificate with registered apprenticeship or other trade certificate
+               6  With high school certificate or equivalency certificate with college, CEGEP or other non-university certificate
+               7  With high school certificate or equivalency certificate with certificate below bachelor
+               8  With high school certificate or equivalency certificate with bachelor's degree
+               9  With high school certificate or equivalency certificate with certificate above bachelor
+              10  With high school certificate or equivalency certificate with degree in medicine,
+                  dentistry, veterinary medicine or optometry
+              11  With high school certificate or equivalency certificate with master's degree
+              12  With high school certificate or equivalency certificate with earned doctorate degree
+              99  Not applicable
+
+           Data type: numeric
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 45
+
+
+           Missing-data code: 99
+           Record/columns: 1/88-89
+
+      ________________________________________________________________________
+
+      mob1               Mobility status – Place of residence 1 year ago
+
+           Description: Refers to the relationship between a person's usual
+           place of residence on Census Day and his or her usual place of
+           residence one year earlier. A person is classified as a
+           non-mover if no difference exists. Otherwise, a person is
+           classified as a mover and this categorization is called mobility
+           status (1 year ago). Within the category of movers, a further
+           distinction is made between non-migrants and migrants; this
+           difference is called migration status.
+
+           VALUE  LABEL
+               1  Non-movers
+               2  Non-migrants
+               3  Different CSD, same census division
+               4  Different CD, same province
+               5  Interprovincial migrants
+               6  External migrants
+               8  Not available
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/90
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 46
+
+
+      mob5               Mobility status – Place of residence 5 years ago
+
+           Description: Refers to the relationship between a person's usual
+           place of residence on Census Day and his or her usual place of
+           residence five years earlier. A person is classified as a
+           non-mover if no difference exists. Otherwise, a person is
+           classified as a mover and this categorization is called mobility
+           status (5 years ago). Within the movers category, a further
+           distinction is made between non-migrants and migrants; this
+           difference is called migration status.
+
+           VALUE  LABEL
+               1  Non-movers
+               2  Non-migrants
+               3  Different CSD, same census division
+               4  Different CD, same province
+               5  Interprovincial migrants
+               6  External migrants
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/91
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 47
+
+
+      pr1                Province of residence 1 year ago
+
+           Description: Mobility 1: Refers to the person's usual province
+           or territory of residence on May 16, 2005, one year prior to
+           Census Day. This concept applies to the mobility status (1 year
+           ago) subuniverse only excluding persons under one year of age,
+           institutional residents and Canadians (military and government
+           personnel) in households outside Canada
+
+           VALUE  LABEL
+              10  Lived in Newfoundland and Labrador 1 year ago
+              11  Lived in Prince Edward Island 1 year ago
+              12  Lived in Nova Scotia 1 year ago
+              13  Lived in New Brunswick 1 year ago
+              24  Lived in Quebec 1 year ago
+              35  Lived in Ontario 1 year ago
+              46  Lived in Manitoba 1 year ago
+              47  Lived in Saskatchewan 1 year ago
+              48  Lived in Alberta 1 year ago
+              59  Lived in British Columbia 1 year ago
+              60  Lived in Northern Canada 1 year ago
+              88  Not available
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 88,99
+           Record/columns: 1/92-93
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 48
+
+
+      pr5                Province of residence 5 years ago
+
+           Description: Mobility 5: Refers to the person's usual province
+           or territory of residence on May 16, 2001, five years prior to
+           Census Day. This concept applies to the mobility status (5 years
+           ago) subuniverse only excluding persons under five years of age,
+           institutional residents and Canadians (military and government
+           personnel) in households outside Canada
+
+           VALUE  LABEL
+              10  Lived in Newfoundland and Labrador 5 years ago
+              11  Lived in Prince Edward Island 5 years ago
+              12  Lived in Nova Scotia 5 years ago
+              13  Lived in New Brunswick 5 years ago
+              24  Lived in Quebec 5 years ago
+              35  Lived in Ontario 5 years ago
+              46  Lived in Manitoba 5 years ago
+              47  Lived in Saskatchewan 5 years ago
+              48  Lived in Alberta 5 years ago
+              59  Lived in British Columbia 5 years ago
+              60  Lived in Northern Canada 5 years ago
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data code: 99
+           Record/columns: 1/94-95
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 49
+
+
+      dist               Commuting distance to work
+
+           Description: Refers to the distance, in kilometres, between the
+           respondent's residence and his or her usual workplace location.
+           The variable relates to non-institutional residents 15 years of
+           age and over who worked at some time since January 1, 2005. The
+           variable usually relates to the individual's job held in the
+           week prior to enumeration. However, if the person did not work
+           during that week but had worked at some time since January 1,
+           2005, the information relates to the job held longest during
+           that period.
+
+           VALUE  LABEL
+               1  Distance less than 5 km
+               2  Distance 5 to 9.9 km
+               3  Distance 10 to 14.9 km
+               4  Distance 15 to 19.9 km
+               5  Distance 20 to 24.9 km
+               6  Distance 25 to 29.9 km
+               7  Distance greater than or equal to 30 km
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/96
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 50
+
+
+      mode               Mode of transportation to work
+
+           Description: Refers to the mode of transportation to work of
+           non-institutional residents 15 years of age and over who worked
+           at some time since January 1, 2005. Persons who indicate in the
+           place of work question that they either had no fixed workplace
+           address, or specified a usual workplace address, are asked to
+           identify the mode of transportation they usually use to commute
+           from home to work. The variable usually relates to the
+           individual's job in the week prior to enumeration. However, if
+           the person did not work during that week but had worked at some
+           time since January 1, 2005, the information relates to the job
+           held longest during that period.
+
+           VALUE  LABEL
+               1  Bicycle
+               2  Car, truck, van as driver
+               3  Motorcycle
+               4  Other mode
+               5  Car, truck, van as passenger
+               6  Taxicab
+               7  Public transit
+               8  Walked
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/97
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 51
+
+
+      powst              Place of work status
+
+           Description: Refers to the place of work of non-institutional
+           residents 15 years of age and over who worked at some time since
+           January 1, 2005. The variable usually relates to the
+           individualâ€™s job held in the week prior to enumeration. However,
+           if the person did not work during that week but had worked at
+           some time since January 1, 2005, the information relates to the
+           job held longest during that period. Respondent-completed
+           responses Worked at home -- Persons whose job is located in the
+           same building as their place of residence, persons who live and
+           work on the same farm, building superintendents and teleworkers
+           who spend most of their work week working at home. Worked
+           outside Canada -- Persons who work at a location outside Canada.
+           This can include diplomats, Armed Forces personnel and other
+           persons enumerated abroad. This category also includes recent
+           immigrants who may not currently be employed, but whose job of
+           longest duration since January 1, 2005 was held outside Canada.
+           No fixed workplace address -- Persons who do not go from home to
+           the same workplace location at the beginning of each shift. Such
+           persons include building and landscape contractors, travelling
+           salespersons, independent truck drivers, etc. Usual place of
+           work -- Persons who are not included in the categories described
+           above and who report to the same (usual) workplace location at
+           the beginning of each shift are included here. Usual place of
+           work is split into four categories based on a comparison of the
+           respondent's place of work and place of residence. The
+           comparison covers all levels of the Standard Geographical
+           Classification i.e. province, census division and census
+           subdivision.
+
+           VALUE  LABEL
+               1  Worked at home
+               2  No fixed address
+               3  Worked outside Canada
+               4  Worked in census subdivision (municipality) of residence
+               5  Worked in a different census subdivision (municipality) within the census division (county) of residence
+               6  Worked in a different census division (county)
+               7  Worked in a different province
+               8  Not available
+               9  Not Applicable
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/98
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 52
+
+
+      pwpr               Province of work
+
+           Description: Province of work refers to the geographic location
+           of the workplace of non-institutional residents 15 years of age
+           and over who have worked since January 1, 2005. The variable
+           usually relates to the individual's job held in the week prior
+           to census. However, if the person had not worked during that
+           week but had worked at some time since January 1, 2005, the
+           information relates to the job held longest during that period.
+
+           VALUE  LABEL
+              10  Newfoundland and Labrador
+              11  Prince Edward Island
+              12  Nova Scotia
+              13  New Brunswick
+              24  Quebec
+              35  Ontario
+              46  Manitoba
+              47  Saskatchewan
+              48  Alberta
+              59  British Columbia
+              60  Northern Canada
+              88  Not available
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 88,99
+           Record/columns: 1/99-100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 53
+
+
+      cow                Class of worker
+
+           Description: This variable classifies persons who reported a job
+           into the following categories: (a) persons who worked mainly for
+           wages, salaries, commissions, tips, piece-rates, or payments 'in
+           kind' (payments in goods or services rather than money); (b)
+           persons who worked mainly for themselves, with or without paid
+           help, operating a business, farm or professional practice, alone
+           or in partnership; (c) persons who worked without pay in a
+           family business, farm or professional practice owned or operated
+           by a related household member; unpaid family work does not
+           include unpaid housework, unpaid childcare, unpaid care to
+           seniors and volunteer work. The job reported was the one held in
+           the week (Sunday to Saturday) prior to enumeration (May 16,
+           2006) if the person was employed, or the job of longest duration
+           since January 1, 2005, if the person was not employed during the
+           reference week. Persons with two or more jobs in the reference
+           week were asked to provide information for the job at which they
+           worked the most hours. Incorporation status: Refers to the legal
+           status of a business, farm or professional practice. It is
+           directed at persons who were mainly self-employed,
+
+           VALUE  LABEL
+               1  Unpaid family workers – Worked without pay for a relative
+                  in a family business or farm
+               2  Paid worker – Originally self-employed without paid
+                  help, incorporated
+               3  Paid worker – Originally self-employed with paid help,
+                  incorporated
+               4  Paid worker – Working for wages, salary, tips or commission
+               5  Self-employed without paid help, not incorporated
+               6  Self-employed with paid help, not incorporated
+               8  Not available
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/101
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 54
+
+
+      fptwk              Full-time or part-time weeks worked in 2005
+
+           Description: Refers to persons who worked for pay or in
+           self-employment in 2005. These persons were asked to report
+           whether the weeks they worked in 2005 were full-time weeks (30
+           hours or more per week) or not, on the basis of all jobs held.
+           Persons with a part-time job for part of the year and a
+           full-time job for another part of the year were to report the
+           information for the job at which they worked the most weeks.
+
+           VALUE  LABEL
+               1  Worked mainly full-time weeks in 2005
+               2  Worked mainly part-time weeks in 2005
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/102
+
+      ________________________________________________________________________
+
+      hrswrk             Hours worked for pay or in self-employment
+
+           Description: Refers to the actual number of hours that persons
+           worked for pay or in self-employment at all jobs held in the
+           week (Sunday to Saturday) prior to Census Day (May 16, 2006).
+           This includes hours worked for wages, salaries, tips,
+           commissions, piece-rate payments or payments 'in kind' (payments
+           in goods or services rather than money). Hours worked in one's
+           own business, farm or professional practice or hours worked
+           without pay in a family business, farm or professional practice,
+           owned or operated by a relative living in the same household are
+           also included. Excluded are hours during which the respondent
+           was absent, with or without pay, for part of the week because of
+           illness, vacation, or other reasons.
+
+           VALUE  LABEL
+             999  Not applicable
+
+           Data type: numeric
+           Missing-data code: 999
+           Record/columns: 1/103-105
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 55
+
+
+      lfact              Labour force activity
+
+           Description: Refers to the labour market activity of the
+           population 15 years of age and over in the week (Sunday to
+           Saturday) prior to Census Day (May 16, 2006). Respondents were
+           classified as 'Employed', 'Unemployed', or 'Not in the labour
+           force.' The labour force includes the employed and the
+           unemployed. Employed Persons who, during the week (Sunday to
+           Saturday) prior to Census Day (May 16, 2006): (a) did any work
+           at all for pay or in self-employment or without pay in a family
+           farm, business or professional practice; (b) were absent from
+           their job or business, with or without pay, for the entire week
+           because of a vacation, an illness, a labour dispute at their
+           place of work, or any other reasons. Unemployed Persons who,
+           during the week (Sunday to Saturday) prior to Census Day (May
+           16, 2006), were without paid work or without self-employment
+           work and were available for work and either: (a) had actively
+           looked for paid work in the past four weeks; or (b) were on
+           temporary lay-off and expected to return to their job; or (c)
+           had definite arrangements to start a new job in four weeks or
+           less. Not in the labour force Refers to persons who, in the week
+           (Sunday to Saturday) prior to Census Day (May 16, 2006), were
+           neither employed nor unemployed. It includes students,
+           homemakers, retired workers, seasonal workers in an 'off' season
+           who were not looking for work, and persons who could not work
+           because of a long-term illness or disability. Labour force
+           Refers to persons who were either employed or unemployed during
+           the week (Sunday to Saturday) prior to Census Day (May 16,
+           2006). Labour force = Employed + Unemployed
+
+           VALUE  LABEL
+               1  Employed – Worked in reference week
+               2  Employed – Absent in reference week
+               3  Unemployed – Temporary layoff – Did not look for work
+               4  Unemployed – Temporary layoff – Looked for full-time work
+               5  Unemployed – Temporary layoff – Looked for part-time work
+               6  Unemployed – New job – Did not look for work
+               7  Unemployed – New job – Looked for full-time work
+               8  Unemployed – New job – Looked for part-time work
+               9  Unemployed – Looked for full-time work
+              10  Unemployed – Looked for part-time work
+              11  Not in the labour force – Last worked in 2006
+              12  Not in the labour force – Last worked in 2005
+              13  Not in the labour force – Last worked before 2005
+              14  Not in the labour force – Never worked
+              99  Not applicable
+
+           Data type: numeric
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 56
+
+
+           Missing-data code: 99
+           Record/columns: 1/106-107
+
+      ________________________________________________________________________
+
+      lstwrk             When last worked for pay or in self-employment
+
+           Description: Refers to the year or period in which persons last
+           worked for pay or in self-employment, even if only for a few
+           days.
+
+           VALUE  LABEL
+               1  Last worked before 2005
+               2  Last worked in 2005
+               3  Last worked in 2006
+               4  Never worked
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/108
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 57
+
+
+      naics              Industry (based on the 2002 North American Industry Classification System [NAICS 2002])
+
+           Description: Refers to the general nature of the business
+           carried out in the establishment where the person worked. If the
+           person did not have a job during the week (Sunday to Saturday)
+           prior to enumeration (May 16, 2006), the data relate to the job
+           of longest duration since January 1, 2005. Persons with two or
+           more jobs were required to report the information for the job at
+           which they worked the most hours. The 2006 Census industry data
+           are produced according to the 2002 NAICS. The NAICS provides
+           enhanced industry comparability among the three North American
+           Free Trade Agreement (NAFTA) trading partners (Canada, United
+           States and Mexico). This classification consists of a systematic
+           and comprehensive arrangement of industries structured into 20
+           sectors, 103 subsectors and 328 industry groups. The criteria
+           used to create these categories are similar to input structures,
+           labour skills or production processes used by the establishment.
+           For further information on the classification, see North
+           American Industry Classification System, Canada, 2002, Catalogue
+           no.12-501-XPE.
+
+           VALUE  LABEL
+               1  Agriculture, forestry, fishing and hunting (11)
+               2  Mining and oil and gas extraction (21)
+               3  Utilities (22)
+               4  Construction (23)
+               5  Manufacturing (31-33)
+               6  Wholesale trade (41)
+               7  Retail trade (44-45)
+               8  Transportation and warehousing (48-49)
+               9  Information and cultural industries (51)
+              10  Finance and insurance (52)
+              11  Real estate and rental and leasing (53)
+              12  Professional, scientific and technical services (54)
+              13  Management of companies and enterprises (55)
+              14  Administrative and support, waste management and remediation services (56)
+              15  Educational services (61)
+              16  Health care and social assistance (62)
+              17  Arts, entertainment and recreation (71)
+              18  Accommodation and food services (72)
+              19  Other services (except public administration) (81)
+              20  Public administration (91)
+              88  Not available
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 88,99
+           Record/columns: 1/109-110
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 58
+
+
+      nochrd             Occupation (Employment equity designations – based on the National Occupational Classification)
+
+           Description: Refers to the kind of work persons were doing
+           during the reference week, as determined by their kind of work
+           and the description of the main activities in their job. If the
+           person did not have a job during the week (Sunday to Saturday)
+           prior to enumeration (May 16, 2006), the data relate to the job
+           of longest duration since January 1, 2005. Persons with two or
+           more jobs were to report the information for the job at which
+           they worked the most hours. Employment equity groups are defined
+           on the basis of the National Occupational Classification (NOC).
+           The NOC was developed and is maintained by Human Resources and
+           Skills Development Canada (HRSDC). It has a similar structure to
+           that of the National Occupational Classification for Statistics
+           (NOC-S), the classification used by Statistics Canada to
+           disseminate occupation data. The two classifications have 520
+           unit groups, 140 minor groups and 10 broad categories in common.
+           However, there are 47 major groups in the NOC--S and 26 major
+           groups in the NOC. Occupation data from the 2006 Census are
+           available according to both the NOC--S and the NOC structures.
+
+           VALUE  LABEL
+               1  Managers
+               2  Professionals
+               3  Semi-professionals and technicians
+               4  Supervisors
+               5  Administrative and senior clerical personnel
+               6  Skilled sales and service personnel
+               7  Skilled crafts and trades workers
+               8  Clerical personnel
+               9  Intermediate sales and service personnel
+              10  Semi-skilled manual workers
+              11  Other sales and service personnel
+              12  Other manual workers
+              88  Not available
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 88,99
+           Record/columns: 1/111-112
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 59
+
+
+      nocs               Occupation (based on the 2006 National Occupational Classification for Statistics [NOC-S 2006])
+
+           Description: Refers to the kind of work persons were doing
+           during the reference week, as determined by their kind of work
+           and the description of the main activities in their job. If the
+           person did not have a job during the week (Sunday to Saturday)
+           prior to enumeration (May 16, 2006), the data relate to the job
+           of longest duration since January 1, 2005. Persons with two or
+           more jobs were to report the information for the job at which
+           they worked the most hours. The 2006 Census occupation data are
+           classified according to the National Occupational Classification
+           for Statistics 2006 (NOC-S 2006). This classification is
+           composed of four levels of aggregation. There are 10 broad
+           occupational categories containing 47 major groups that are
+           further subdivided into 140 minor groups. At the most detailed
+           level, there are 520 occupation unit groups. Occupation unit
+           groups are formed on the basis of the education, training, or
+           skill level required to enter the job, as well as the kind of
+           work performed, as determined by the tasks, duties and
+           responsibilities of the occupation.
+
+           VALUE  LABEL
+               1  Senior management occupations (A0)
+               2  Other management occupations (A1, A2, A3)
+               3  Professional occupations in business and finance (B0)
+               4  Financial, secretarial and administrative occupations (B1, B2, B3)
+               5  Clerical occupations and clerical supervisors (B4, B5)
+               6  Occupations in natural and applied sciences (C0, C1)
+               7  Professional occupations in health, registered nurses and supervisors (D0, D1)
+               8  Technical, assisting and related occupations in health (D2, D3)
+               9  Occupations in social science, government services and religion (E0, E2)
+              10  Teachers and professors (E1)
+              11  Occupations in art, culture, recreation and sport (F0, F1)
+              12  Wholesale, technical, insurance, real estate sales specialists, and retail, wholesale and grain buyers (G1)
+              13  Retail trade supervisors, salespersons, sales clerks and cashiers (G2, G3, G011)
+              14  Chefs and cooks, supervisors, and other occupations in food and beverage service (G4, G5, G012)
+              15  Occupations in protective services (G6)
+              16  Childcare and home support workers (G8)
+              17  Service supervisors, occupations in travel and accommodation, attendants in
+                  recreation and sport and sales and service occupations, n.e.c. (G7, G9, G013, G014, G015, G016)
+              18  Contractors and supervisors in trades and transportation (H0)
+              19  Construction trades (H1)
+              20  Other trades occupations (H2, H3, H4, H5)
+              21  Transport and equipment operators (H6, H7)
+              22  Trades helpers, construction, and transportation labourers and related occupations (H8)
+              23  Occupations unique to primary industries (I0, I1, I2)
+              24  Supervisors, machine operators and assemblers in manufacturing (J0, J1, J2)
+              25  Labourers in processing, manufacturing and utilities (J3)
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 60
+
+
+              88  Not available
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 88,99
+           Record/columns: 1/113-114
+
+      ________________________________________________________________________
+
+      wkswrk             Weeks worked in 2005
+
+           Description: Refers to the number of weeks in 2005 during which
+           persons worked for pay or in self-employment at all jobs held,
+           even if only for a few hours. It includes weeks of paid
+           vacation, weeks on sick leave with pay, and all weeks in which
+           training was paid for by the employer.
+
+           VALUE  LABEL
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data code: 99
+           Record/columns: 1/115-116
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 61
+
+
+      wrkact             Work activity in 2005
+
+           Description: Refers to the number of weeks in which a person
+           worked for pay or in self-employment in 2005 at all jobs held,
+           even if only for a few hours, and whether these weeks were
+           mostly full time (30 hours or more per week) or mostly part time
+           (1 to 29 hours per week). The term 'full-year full-time workers'
+           refers to persons 15 years of age and over who worked 49 to 52
+           weeks (mostly full time) in 2005 for pay or in self-employment.
+
+           VALUE  LABEL
+               1  Didn't work in 2005, worked before 2005 or never worked
+               2  Didn't work in 2005, worked in 2006
+               3  Worked 1-13 weeks full time
+               4  Worked 1-13 weeks part time
+               5  Worked 14-26 weeks full time
+               6  Worked 14-26 weeks part time
+               7  Worked 27-39 weeks full time
+               8  Worked 27-39 weeks part time
+               9  Worked 40-48 weeks full time
+              10  Worked 40-48 weeks part time
+              11  Worked 49-52 weeks full time
+              12  Worked 49-52 weeks part time
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data code: 99
+           Record/columns: 1/117-118
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 62
+
+
+      uphwrk             Hours spent doing unpaid housework
+
+           Description: Refers to the number of hours persons spent doing
+           unpaid housework, yard work or home maintenance in the week
+           (Sunday to Saturday) prior to Census Day (May 16, 2006). It
+           includes hours spent doing unpaid housework for members of one's
+           own household, for other family members outside the household,
+           and for friends or neighbours. Unpaid housework does not include
+           volunteer work for a non-profit organization, a religious
+           organization, a charity or community group, or work without pay
+           in the operation of a family farm, business or professional
+           practice.
+
+           VALUE  LABEL
+               1  No hours of housework
+               2  Less than 5 hours of housework
+               3  5 to 14 hours of housework
+               4  15 to 29 hours of housework
+               5  30 to 59 hours of housework
+               6  60 hours or more of housework
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/119
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 63
+
+
+      upkid              Hours spent looking after children, without pay
+
+           Description: Refers to the number of hours persons spent looking
+           after children without pay. It includes hours spent providing
+           unpaid child care for members of one's own household, for other
+           family members outside the household, for friends or neighbours
+           in the week (Sunday to Saturday) prior to Census Day (May 16,
+           2006). Unpaid child care does not include volunteer work for a
+           non-profit organization, a religious organization, a charity or
+           community group, or work without pay in the operation of a
+           family farm, business or professional practice.
+
+           VALUE  LABEL
+               1  No hours of child care
+               2  Less than 5 hours of child care
+               3  5 to 14 hours of child care
+               4  15 to 29 hours of child care
+               5  30 to 59 hours of child care
+               6  60 hours or more of child care
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/120
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 64
+
+
+      upsr               Hours spent providing unpaid care or assistance to seniors
+
+           Description: Refers to the number of hours persons spent
+           providing unpaid care or assistance to seniors of one's own
+           household, to other senior family members outside the household,
+           and to friends or neighbours in the week (Sunday to Saturday)
+           prior to Census Day (May 16, 2006). Unpaid care or assistance to
+           seniors does not include volunteer work for a non-profit
+           organization, religious organization, charity or community
+           group, or work without pay in the operation of a family farm,
+           business or professional practice.
+
+           VALUE  LABEL
+               1  No hours of care to seniors
+               2  Less than 5 hours of care to seniors
+               3  5 to 9 hours of care to seniors
+               4  10 to 19 hours of care to seniors
+               5  20 or more hours of care to seniors
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/121
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 65
+
+
+      cfinc              Census family income groups
+
+           Description: Census family income for all persons in census
+           families. The total income of a census family is the sum of the
+           total incomes of all members of that family.
+
+           VALUE  LABEL
+               1  Under $2,000
+               2  $ 2,000 to $ 4,999
+               3  $ 5,000 to $ 6,999
+               4  $ 7,000 to $ 9,999
+               5  $ 10,000 to $ 11,999
+               6  $ 12,000 to $ 14,999
+               7  $ 15,000 to $ 16,999
+               8  $ 17,000 to $ 19,999
+               9  $ 20,000 to $ 24,999
+              10  $ 25,000 to $ 29,999
+              11  $ 30,000 to $ 34,999
+              12  $ 35,000 to $ 39,999
+              13  $ 40,000 to $ 44,999
+              14  $ 45,000 to $ 49,999
+              15  $ 50,000 to $ 54,999
+              16  $ 55,000 to $ 59,999
+              17  $ 60,000 to $ 64,999
+              18  $ 65,000 to $ 69,999
+              19  $ 70,000 to $ 74,999
+              20  $ 75,000 to $ 79,999
+              21  $ 80,000 to $ 89,999
+              22  $ 90,000 to $ 99,999
+              23  $ 100,000 to $ 124,999
+              24  $ 125,000 to $ 149,999
+              25  $ 150,000 to $ 174,999
+              26  $175,000 to $199,999
+              27  $200,000 to $249,999
+              28  $250,000 and over
+              88  Not available
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 88,99
+           Record/columns: 1/122-123
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 66
+
+
+      cfinc_at           Census family after-tax income groups
+
+           Description: After-tax income of census families. The after-tax
+           income of a census family is the sum of the after-tax incomes of
+           all members of that family.
+
+           VALUE  LABEL
+               1  Under $2,000
+               2  $ 2,000 to $ 4,999
+               3  $ 5,000 to $ 6,999
+               4  $ 7,000 to $ 9,999
+               5  $ 10,000 to $ 11,999
+               6  $ 12,000 to $ 14,999
+               7  $ 15,000 to $ 16,999
+               8  $ 17,000 to $ 19,999
+               9  $ 20,000 to $ 24,999
+              10  $ 25,000 to $ 29,999
+              11  $ 30,000 to $ 34,999
+              12  $ 35,000 to $ 39,999
+              13  $ 40,000 to $ 44,999
+              14  $ 45,000 to $ 49,999
+              15  $ 50,000 to $ 54,999
+              16  $ 55,000 to $ 59,999
+              17  $ 60,000 to $ 64,999
+              18  $ 65,000 to $ 69,999
+              19  $ 70,000 to $ 74,999
+              20  $ 75,000 to $ 79,999
+              21  $ 80,000 to $ 89,999
+              22  $ 90,000 to $ 99,999
+              23  $ 100,000 to $ 124,999
+              24  $ 125,000 to $ 149,999
+              25  $ 150,000 to $ 199,999
+              26  $ 200,000 and over
+              88  Not available
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 88,99
+           Record/columns: 1/124-125
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 67
+
+
+      chdbn              Child benefits
+
+           Description: Refers to payments received under the Canada child
+           tax benefit program during calendar year 2005 by parents with
+           dependent children less than 18 years of age. Limited
+           information was available for respondents who allowed use of
+           their income tax data on these benefits. For these persons,
+           these benefits were calculated and assigned, where applicable,
+           to one of the parents in the census family on the basis of
+           information on children in the family and the family income.
+           Included with the Canada child tax benefit is the National child
+           benefit supplement (NCBS) for low-income families with children.
+           The NCBS is the federal contribution to the National child
+           benefit (NCB), a joint initiative of federal, provincial and
+           territorial governments. Also included are child disability
+           benefits and earned income supplements provided by certain
+           provinces and territories.
+
+             VALUE  LABEL
+           8888888  Not available
+           9999999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888888,9999999
+           Record/columns: 1/126-132
+
+      ________________________________________________________________________
+
+      cqppb              Canada/Quebec Pension Plan benefits
+
+           Description: Refers to benefits received during calendar year
+           2005 from the Canada or Quebec Pension Plan (for example,
+           retirement pensions, survivors' benefits and disability
+           pensions). Does not include lump-sum death benefits.
+
+             VALUE  LABEL
+           8888888  Not available
+           9999999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888888,9999999
+           Record/columns: 1/133-139
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 68
+
+
+      efinc              Economic family income groups
+
+           Description: Economic family income for all persons in economic
+           families. The total income of an economic family is the sum of
+           the total incomes of all members of that family.
+
+           VALUE  LABEL
+               1  Under $2,000
+               2  $ 2,000 to $ 4,999
+               3  $ 5,000 to $ 6,999
+               4  $ 7,000 to $ 9,999
+               5  $ 10,000 to $ 11,999
+               6  $ 12,000 to $ 14,999
+               7  $ 15,000 to $ 16,999
+               8  $ 17,000 to $ 19,999
+               9  $ 20,000 to $ 24,999
+              10  $ 25,000 to $ 29,999
+              11  $ 30,000 to $ 34,999
+              12  $ 35,000 to $ 39,999
+              13  $ 40,000 to $ 44,999
+              14  $ 45,000 to $ 49,999
+              15  $ 50,000 to $ 54,999
+              16  $ 55,000 to $ 59,999
+              17  $ 60,000 to $ 64,999
+              18  $ 65,000 to $ 69,999
+              19  $ 70,000 to $ 74,999
+              20  $ 75,000 to $ 79,999
+              21  $ 80,000 to $ 89,999
+              22  $ 90,000 to $ 99,999
+              23  $ 100,000 to $ 124,999
+              24  $ 125,000 to $ 149,999
+              25  $ 150,000 to $ 174,999
+              26  $175,000 to $199,999
+              27  $200,000 to $249,999
+              28  $250,000 and over
+              88  Not available
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 88,99
+           Record/columns: 1/140-141
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 69
+
+
+      efinc_at           Economic family after-tax income groups
+
+           Description: After-tax income of economic families for all
+           persons. The after-tax income of an economic family is the sum
+           of the after-tax incomes of all members of that family.
+
+           VALUE  LABEL
+               1  Under $2,000
+               2  $ 2,000 to $ 4,999
+               3  $ 5,000 to $ 6,999
+               4  $ 7,000 to $ 9,999
+               5  $ 10,000 to $ 11,999
+               6  $ 12,000 to $ 14,999
+               7  $ 15,000 to $ 16,999
+               8  $ 17,000 to $ 19,999
+               9  $ 20,000 to $ 24,999
+              10  $ 25,000 to $ 29,999
+              11  $ 30,000 to $ 34,999
+              12  $ 35,000 to $ 39,999
+              13  $ 40,000 to $ 44,999
+              14  $ 45,000 to $ 49,999
+              15  $ 50,000 to $ 54,999
+              16  $ 55,000 to $ 59,999
+              17  $ 60,000 to $ 64,999
+              18  $ 65,000 to $ 69,999
+              19  $ 70,000 to $ 74,999
+              20  $ 75,000 to $ 79,999
+              21  $ 80,000 to $ 89,999
+              22  $ 90,000 to $ 99,999
+              23  $ 100,000 to $ 124,999
+              24  $ 125,000 to $ 149,999
+              25  $ 150,000 to $ 199,999
+              26  $ 200,000 and over
+              88  Not available
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 88,99
+           Record/columns: 1/142-143
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 70
+
+
+      eicbn              Employment insurance benefits
+
+           Description: Refers to total employment insurance benefits
+           received during calendar year 2005, before income tax
+           deductions. It includes benefits for unemployment, sickness,
+           maternity, paternity, adoption, work sharing, retraining and
+           benefits to self-employed fishers received under the federal
+           employment insurance program.
+
+             VALUE  LABEL
+           8888888  Not available
+           9999999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888888,9999999
+           Record/columns: 1/144-150
+
+      ________________________________________________________________________
+
+      empin              Employment income
+
+           Description: Refers to total income received by persons 15 years
+           of age and over during calendar year 2005 as wages and salaries,
+           net income from a non-farm unincorporated business and/or
+           professional practice, and/or net farm self-employment income.
+
+             VALUE  LABEL
+           8888888  Not available
+           9999999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888888,9999999
+           Record/columns: 1/151-157
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 71
+
+
+      govti              Other government income
+
+           Description: Refers to all transfer payments, excluding those
+           covered as a separate income source (child benefits, old age
+           security pensions and guaranteed income supplements, Canada or
+           Quebec Pension Plan benefits and employment insurance benefits)
+           received from federal, provincial, territorial or municipal
+           programs during the calendar year 2005. This source includes
+           social assistance payments received by persons in need, such as
+           mothers with dependent children, persons temporarily or
+           permanently unable to work, elderly individuals, the blind and
+           persons with disabilities. Included are provincial income
+           supplement payments to seniors and provincial payments to help
+           offset accommodation costs. Also included are other transfer
+           payments, such as payments received from training programs
+           sponsored by the federal and provincial governments, veteransâ€™
+           pensions, war veteransâ€™ allowance, pensions to widows and
+           dependants of veterans, and workersâ€™ compensation. Additionally,
+           refundable provincial tax credits and refunds of the Goods and
+           Services Tax (GST), Quebec Sales Tax (QST), Saskatchewan Sales
+           Tax Credit (SSTC) or Harmonized Sales Tax (HST) received in 2005
+           are included.
+
+             VALUE  LABEL
+           8888888  Not available
+           9999999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888888,9999999
+           Record/columns: 1/158-164
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 72
+
+
+      gtrfs              Total government transfer payments
+
+           Description: Refers to total income from all transfer payments
+           received from federal, provincial, territorial or municipal
+           governments during calendar year 2005. This variable is derived
+           by summing the amounts reported in: the old age security pension
+           and guaranteed income supplement, allowance and allowance for
+           the survivor benefits, from Canada or Quebec Pension Plan
+           benefits, from employment insurance, child benefits and other
+           income from government sources.
+
+             VALUE  LABEL
+           8888888  Not available
+           9999999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888888,9999999
+           Record/columns: 1/165-171
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 73
+
+
+      hhinc              Household income groups
+
+           Description: The total income of a household is the sum of the
+           total incomes of all members of that household.
+
+           VALUE  LABEL
+               1  Under $2,000
+               2  $ 2,000 to $ 4,999
+               3  $ 5,000 to $ 6,999
+               4  $ 7,000 to $ 9,999
+               5  $ 10,000 to $ 11,999
+               6  $ 12,000 to $ 14,999
+               7  $ 15,000 to $ 16,999
+               8  $ 17,000 to $ 19,999
+               9  $ 20,000 to $ 24,999
+              10  $ 25,000 to $ 29,999
+              11  $ 30,000 to $ 34,999
+              12  $ 35,000 to $ 39,999
+              13  $ 40,000 to $ 44,999
+              14  $ 45,000 to $ 49,999
+              15  $ 50,000 to $ 54,999
+              16  $ 55,000 to $ 59,999
+              17  $ 60,000 to $ 64,999
+              18  $ 65,000 to $ 69,999
+              19  $ 70,000 to $ 74,999
+              20  $ 75,000 to $ 79,999
+              21  $ 80,000 to $ 89,999
+              22  $ 90,000 to $ 99,999
+              23  $ 100,000 to $ 124,999
+              24  $ 125,000 to $ 149,999
+              25  $ 150,000 to $ 174,999
+              26  $175,000 to $199,999
+              27  $200,000 to $249,999
+              28  $250,000 and over
+              88  Not available
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 88,99
+           Record/columns: 1/172-173
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 74
+
+
+      hhinc_at           Household after-tax income groups
+
+           Description: The after-tax income of households for all persons
+           is the sum of the after-tax incomes of all members of that
+           household.
+
+           VALUE  LABEL
+               1  Under $2,000
+               2  $ 2,000 to $ 4,999
+               3  $ 5,000 to $ 6,999
+               4  $ 7,000 to $ 9,999
+               5  $ 10,000 to $ 11,999
+               6  $ 12,000 to $ 14,999
+               7  $ 15,000 to $ 16,999
+               8  $ 17,000 to $ 19,999
+               9  $ 20,000 to $ 24,999
+              10  $ 25,000 to $ 29,999
+              11  $ 30,000 to $ 34,999
+              12  $ 35,000 to $ 39,999
+              13  $ 40,000 to $ 44,999
+              14  $ 45,000 to $ 49,999
+              15  $ 50,000 to $ 54,999
+              16  $ 55,000 to $ 59,999
+              17  $ 60,000 to $ 64,999
+              18  $ 65,000 to $ 69,999
+              19  $ 70,000 to $ 74,999
+              20  $ 75,000 to $ 79,999
+              21  $ 80,000 to $ 89,999
+              22  $ 90,000 to $ 99,999
+              23  $ 100,000 to $ 124,999
+              24  $ 125,000 to $ 149,999
+              25  $ 150,000 to $ 199,999
+              26  $ 200,000 and over
+              88  Not available
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 88,99
+           Record/columns: 1/174-175
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 75
+
+
+      inctax             Income tax paid
+
+           Description: Refers to all federal, provincial and territorial
+           taxes paid on 2005 income. Federal, provincial and territorial
+           taxes paid refer to taxes on income, after taking into account
+           exemptions, deductions, non-refundable tax credits and the
+           Quebec abatement. These data are obtained from the income tax
+           files for persons who allowed access to their income tax data
+           and from direct responses on the questionnaire for others.
+
+             VALUE  LABEL
+           8888888  Not available
+           9999999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888888,9999999
+           Record/columns: 1/176-182
+
+      ________________________________________________________________________
+
+      invst              Investment income
+
+           Description: Refers to interest received during calendar year
+           2005 from deposits in banks, trust companies, cooperatives,
+           credit unions, caisses populaires, etc., as well as interest on
+           savings certificates, bonds and debentures, and all dividends
+           from both Canadian and foreign corporate stocks and mutual
+           funds. Also included is other investment income from either
+           Canadian or foreign sources, such as net rents from real estate,
+           mortgage and loan interest received, regular income from an
+           estate or trust fund, and interest from insurance policies. Does
+           not include capital gains or losses.
+
+             VALUE  LABEL
+           8888888  Not available
+           9999999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888888,9999999
+           Record/columns: 1/183-189
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 76
+
+
+      lico               Low income before tax status (Person)
+
+           Description: The code values for this variable indicate the
+           position of each member of an economic family and each person
+           not in an economic family in relation to Statistics Canada's low
+           income before tax cut-offs (LICO_BT). The prevalence of low
+           income is the proportion or percentage of economic families or
+           persons not in economic families 15 years of age and over (or
+           population in private households) in a given classification
+           below the low income before tax cut-offs. These prevalence rates
+           are calculated from rounded estimates of economic families and
+           persons not in economic families 15 years of age and over (or
+           population in private households).
+
+           VALUE  LABEL
+               1  Member of a non-low income economic family or non-low income person 15 years of age and over not in an economic family
+               2  Member of a low income economic family or low income person 15 years of age and over not in an economic family
+               8  Not available
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/190
+
+      ________________________________________________________________________
+
+      lico_at            Low income after-tax status (Person)
+
+           Description: The code values for this variable indicate the
+           position of each member of an economic family and each person
+           not in an economic family in relation to Statistics Canada's low
+           income cut-offs (LICO_AT). The prevalence of low income is the
+           proportion or percentage of economic families or persons not in
+           economic families 15 years of age and over (or population in
+           private households) in a given classification below the low
+           income cut-offs. These prevalence rates are calculated from
+           rounded estimates of economic families and persons not in
+           economic families 15 years of age and over (or population in
+           private households).
+
+           VALUE  LABEL
+               1  Member of a non-low income economic family or non-low income person 15 years of age and over not in an economic family
+               2  Member of a low income economic family or low income person 15 years of age and over not in an economic family
+               8  Not available
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/191
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 77
+
+
+      mrkinc             Market income
+
+           Description: Refers to the sum of employment income (wages and
+           salaries, net farm income and net income from non-farm
+           unincorporated business and/or professional practice),
+           investment income, retirement pensions, superannuation and
+           annuities (including those from RRSPs and RRIFs) and other money
+           income. It is equivalent to total income before tax minus all
+           government transfers and is also referred to as income before
+           transfers and taxes.
+
+             VALUE  LABEL
+           8888888  Not available
+           9999999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888888,9999999
+           Record/columns: 1/192-198
+
+      ________________________________________________________________________
+
+      msi                Major sources of income for census families
+
+           Description: The major source of income of census families
+           refers to that component which constitutes the largest
+           proportion of the total income of a Census family. Various
+           combinations of income sources can be used to derive this
+           classification. For example, at the most detailed level, the
+           income sources are combined into five components: wages and
+           salaries, self-employment income (farm and non-farm), government
+           transfer payments, investment income, and other income. The
+           absolute values for these components are compared, and the
+           largest one is designated as the major source of income.
+
+           VALUE  LABEL
+               1  Wages and salaries
+               2  Self-employment income
+               3  Government transfers or no income
+               4  Investment income
+               5  Other income
+               8  Not available
+               9  Not applicable, person not in a Census family or no family information
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/199
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 78
+
+
+      oasgi              Old Age Security pension and Guaranteed Income Supplement
+
+           Description: Refers to old age security pensions and guaranteed
+           income supplements paid to persons 65 years of age and over, and
+           to the allowance or allowance for the survivor paid to 60 to 64
+           year-old spouses, old age security recipients or widow(er)s by
+           the federal government during the calendar year 2005.
+
+             VALUE  LABEL
+           8888888  Not available
+           9999999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888888,9999999
+           Record/columns: 1/200-206
+
+      ________________________________________________________________________
+
+      otinc              Other money income
+
+           Description: Refers to regular cash income received during
+           calendar year 2005 and not reported in any of the other ten
+           sources listed on the questionnaire. For example, severance pay
+           and retirement allowances, alimony, child support, periodic
+           support from other persons not in the household, income from
+           abroad (excluding dividends and interest), non-refundable
+           scholarships, bursaries, fellowships and study grants, and
+           artistsâ€™ project grants are included.
+
+             VALUE  LABEL
+           8888888  Not available
+           9999999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888888,9999999
+           Record/columns: 1/207-213
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 79
+
+
+      retir              Retirement pensions
+
+           Description: Refers to all regular income received by the
+           respondent during calendar year 2005 as the result of having
+           been a member of a pension plan of one or more employers. It
+           includes payments received from all annuities, including
+           payments from a Registered Retirement Income Fund (RRIF), a
+           matured Registered Retirement Savings Plan (RRSP) in the form of
+           a life annuity, a fixed-term annuity, or an income-averaging
+           annuity contract; pensions paid to widow(er)s or other relatives
+           of deceased pensioners; pensions of retired civil servants,
+           Armed Forces personnel and Royal Canadian Mounted Police (RCMP)
+           officers; annuity payments received from the Canadian Government
+           Annuities Fund, an insurance company, etc. Does not include
+           lump-sum death benefits, lump-sum benefits or withdrawals from a
+           pension plan or RRSP, or refunds of over contributions.
+
+             VALUE  LABEL
+           8888888  Not available
+           9999999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888888,9999999
+           Record/columns: 1/214-220
+
+      ________________________________________________________________________
+
+      sempi              Total self-employment income
+
+           Description: Total income received by persons 15 years of age
+           and over during calendar year 2005 as net farm income from
+           self-employment, or net non-farm income from unincorporated
+           business and/or professional practice.
+
+             VALUE  LABEL
+           8888888  Not available
+           9999999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888888,9999999
+           Record/columns: 1/221-227
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 80
+
+
+      totinc             Total income of individual
+
+           Description: Refers to the total money income received from the
+           following sources during calendar year 2005 by persons 15 years
+           of age and over: wages and salaries (total); net farm income;
+           net non-farm income from unincorporated business and/or
+           professional practice; child benefits; old age security pension
+           and guaranteed income supplement; benefits from Canada or Quebec
+           Pension Plan; benefits from employment insurance; other income
+           from government sources; dividends, interest on bonds, deposits
+           and savings certificates, and other investment income;
+           retirement pensions, superannuation and annuities, including
+           those from RRSPs and RRIFs; other money income.
+
+             VALUE  LABEL
+           8888888  Not available
+           9999999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888888,9999999
+           Record/columns: 1/228-234
+
+      ________________________________________________________________________
+
+      totinc_at          Total after-tax income of individual
+
+           Description: Refers to total income minus federal, provincial
+           and territorial income taxes paid for calendar year 2005. Total
+           income refers to income from all sources, including employment
+           income, income from government programs, pension income,
+           investment income and any other money income. Federal,
+           provincial and territorial taxes paid refer to taxes on income,
+           after taking into account exemptions, deductions, non-refundable
+           tax credits and the Quebec abatement. These taxes are obtained
+           from the income tax files for persons who allowed access to
+           their income tax data and from direct responses on the
+           questionnaire for others.
+
+             VALUE  LABEL
+           8888888  Not available
+           9999999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888888,9999999
+           Record/columns: 1/235-241
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 81
+
+
+      wages              Wages and salary income
+
+           Description: Refers to gross wages and salaries before
+           deductions for such items as income tax, pensions and employment
+           insurance. Included in this source are military pay and
+           allowances, tips, commissions and cash bonuses, benefits from
+           wage-loss replacement plans or income-maintenance insurance
+           plans, supplementary unemployment benefits from an employer or
+           union as well as all types of casual earnings during calendar
+           year 2005. Other employment income such as taxable benefits,
+           research grants and royalties are included.
+
+             VALUE  LABEL
+           8888888  Not available
+           9999999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888888,9999999
+           Record/columns: 1/242-248
+
+      ________________________________________________________________________
+
+      condo              Tenure – Condominium
+
+           Description: Refers to whether or not the dwelling is part of a
+           registered condominium. A condominium is a residential complex
+           in which dwellings are owned individually while land is held in
+           joint ownership with others.
+
+           VALUE  LABEL
+               0  Not a condominium
+               1  Condominium
+               8  Not available
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/249
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 82
+
+
+      grosrt             Gross rent
+
+           Description: Refers to the total average monthly payments paid
+           by tenant households to secure shelter. Gross rent includes
+           payments for electricity, oil, gas, coal, wood or other fuels,
+           water and other municipal services, and cash rent.
+           Tenant-occupied private non-farm dwellings.
+
+           VALUE  LABEL
+            8888  Not available
+            9999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888,9999
+           Record/columns: 1/250-253
+
+      ________________________________________________________________________
+
+      omp                Owner's major payments (monthly)
+
+           Description: Refers to the total average monthly payments made
+           by owner households to secure shelter. Owner's major payments
+           include payments for electricity, oil, gas, coal, wood or other
+           fuels, water and other municipal services, monthly mortgage
+           payments, property taxes (municipal and school) and, for 1991,
+           1996, 2001 and 2006, condominium fees. Owner-occupied private
+           non-farm dwellings.
+
+           VALUE  LABEL
+            8888  Not available
+            9999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888,9999
+           Record/columns: 1/254-257
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 83
+
+
+      repair             Condition of dwelling
+
+           Description: Refers to whether, in the judgement of the
+           respondent, the dwelling requires any repairs (excluding
+           desirable remodelling or additions). Regular maintenance refers
+           to painting, furnace cleaning, etc. Minor repairs refer to the
+           repair of missing or loose floor tiles, bricks or shingles,
+           defective steps, railing or siding, etc. Major repairs refer to
+           the repair of defective plumbing or electrical wiring,
+           structural repairs to walls, floors or ceilings, etc.
+
+           VALUE  LABEL
+               1  Only regular maintenance needed
+               2  Minor repairs needed
+               3  Major repairs needed
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/258
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 84
+
+
+      room               Number of rooms
+
+           Description: Refers to the number of rooms in a dwelling. A room
+           is an enclosed area within a dwelling which is finished and
+           suitable for year-round living. Partially divided L-shaped rooms
+           are considered to be separate rooms if they are considered as
+           such by the respondent (e.g., L-shaped dining-room and
+           living-room arrangements). Not counted as rooms are bathrooms,
+           halls, vestibules and rooms used solely for business purposes.
+
+           VALUE  LABEL
+               1  One room
+               2  Two rooms
+               3  Three rooms
+               4  Four rooms
+               5  Five rooms
+               6  Six rooms
+               7  Seven rooms
+               8  Eight rooms
+               9  Nine rooms
+              10  Ten rooms
+              11  Eleven or more rooms
+              99  Not applicable
+
+           Data type: numeric
+           Missing-data code: 99
+           Record/columns: 1/259-260
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 85
+
+
+      tenur              Tenure
+
+           Description: Refers to whether some member of the household owns
+           or rents the dwelling, or whether the dwelling is band housing
+           (on an Indian reserve or settlement). A dwelling is classified
+           as 'owned' even if it is not fully paid for, such as one which
+           has a mortgage or some other claim on it. The dwelling may be
+           situated on rented or leased land or be part of a condominium
+           (whether registered or unregistered). A dwelling is classified
+           as 'rented' even if it is provided without cash rent or at a
+           reduced rent, or if the dwelling is part of a cooperative. For
+           census purposes, in a cooperative, all members jointly own the
+           cooperative and occupy their dwelling units under a lease
+           agreement. For historical and statutory reasons, shelter
+           occupancy on reserves does not lend itself to the usual
+           classification by standard tenure categories. Therefore, a
+           special category 'band housing' has been created for 1991 census
+           products. Band housing also appears in the 1996 and 2001 Census
+           products.
+
+           VALUE  LABEL
+               1  Owned (with or without mortgage)
+               2  Rented (for cash, other) or Band housing
+               8  Not available
+               9  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/261
+
+      ________________________________________________________________________
+
+      value              Value of dwelling
+
+           Description: Refers to the dollar amount expected by the owner
+           if the dwelling were to be sold. Owner-occupied private non-farm
+           dwellings.
+
+             VALUE  LABEL
+           8888888  Not available
+           9999999  Not applicable
+
+           Data type: numeric
+           Missing-data codes: 8888888,9999999
+           Record/columns: 1/262-268
+
+
+
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 86
+
+
+      weight             Individuals weighting factor
+
+           Description: Individuals weighting factor
+
+           Data type: numeric
+           Decimals: 8
+           Record/columns: 1/269-279
+
+      ________________________________________________________________________
+
+      wt1                Replicate PUMF weight
+
+           Description: Weighting factor for replicates, for purpose of
+           estimating sampling variability.
+
+           Data type: numeric
+           Decimals: 7
+           Record/columns: 1/280-290
+
+      ________________________________________________________________________
+
+      wt2                Replicate PUMF weight
+
+           Description: Weighting factor for replicates, for purpose of
+           estimating sampling variability.
+
+           Data type: numeric
+           Decimals: 7
+           Record/columns: 1/291-301
+
+      ________________________________________________________________________
+
+      wt3                Replicate PUMF weight
+
+           Description: Weighting factor for replicates, for purpose of
+           estimating sampling variability.
+
+           Data type: numeric
+           Decimals: 7
+           Record/columns: 1/302-312
+
+      ________________________________________________________________________
+
+      wt4                Replicate PUMF weight
+
+           Description: Weighting factor for replicates, for purpose of
+           estimating sampling variability.
+
+           Data type: numeric
+           Decimals: 7
+           Record/columns: 1/313-323
+
+
+
+
+                                  November 7, 2016
+
+
+
+      Census of Canada, 2006: individual public use microdata file     Page 87
+
+
+      wt5                Replicate PUMF weight
+
+           Description: Weighting factor for replicates, for purpose of
+           estimating sampling variability.
+
+           Data type: numeric
+           Decimals: 7
+           Record/columns: 1/324-334
+
+      ________________________________________________________________________
+
+      wt6                Replicate PUMF weight
+
+           Description: Weighting factor for replicates, for purpose of
+           estimating sampling variability.
+
+           Data type: numeric
+           Decimals: 7
+           Record/columns: 1/335-345
+
+      ________________________________________________________________________
+
+      wt7                Replicate PUMF weight
+
+           Description: Weighting factor for replicates, for purpose of
+           estimating sampling variability. Weighting
+
+           Data type: numeric
+           Decimals: 7
+           Record/columns: 1/346-356
+
+      ________________________________________________________________________
+
+      wt8                Replicate PUMF weight
+
+           Description: Weighting factor for replicates, for purpose of
+           estimating sampling variability. Identifier
+
+           Data type: numeric
+           Decimals: 7
+           Record/columns: 1/357-367
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  November 7, 2016
